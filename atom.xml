@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-12-27T09:24:22.902Z</updated>
+  <updated>2020-12-28T05:24:14.329Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2020/12/25/about/"/>
     <id>http://example.com/2020/12/25/about/</id>
     <published>2020-12-25T09:17:07.059Z</published>
-    <updated>2020-12-27T09:24:22.902Z</updated>
+    <updated>2020-12-28T05:24:14.329Z</updated>
     
     <content type="html"><![CDATA[        <h1 id="建博客的原因"   >          <a href="#建博客的原因" class="heading-link"><i class="fas fa-link"></i></a>建博客的原因</h1>      <p>其实也没什么原因，之前在某三金的指导下搭建过一个Worldpress的博客，但是后面被我直接放弃了….（原因：用不来。不要骂我菜了呜呜呜！）</p><p>后面问了一下室友，告诉我用hexo 和github搭建更加方便和省事一点。于是乎我就来了！！！<br>因为之前其实一直有关注一些工作岗位的要求。其中都有一项就是：有博客的优先…于是我就心动了！！<br>(这句好起码在我找工作之前不会删…)<br>实验室的学长和老师也建议做个博客，写写自己的收获成长等。还有就是大家互相交流，个人感觉很有必要哒！！！</p><hr>]]></content>
     
