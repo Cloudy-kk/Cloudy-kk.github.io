@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-02T07:03:19.155Z</updated>
+  <updated>2021-01-14T12:37:24.014Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,20 +17,46 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://example.com/2021/01/14/hello/"/>
+    <id>http://example.com/2021/01/14/hello/</id>
+    <published>2021-01-14T12:32:22.666Z</published>
+    <updated>2021-01-14T12:37:24.014Z</updated>
+    
+    <content type="html"><![CDATA[<!DOCTYPE html><html><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta http-equiv="X-UA-Compatible" content="ie=edge">    <title></title>    <style>        .vcontent p        {            color: #bbffaa;        }    </style></head><body>    <div class="vcontent">        <p>hello</p>    </div></body></html>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;met</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>2020总结</title>
     <link href="http://example.com/2021/01/02/2020Summary/"/>
     <id>http://example.com/2021/01/02/2020Summary/</id>
     <published>2021-01-02T06:56:01.104Z</published>
-    <updated>2021-01-02T07:03:19.155Z</updated>
+    <updated>2021-01-14T15:15:13.468Z</updated>
     
-    <content type="html"><![CDATA[        <h6 id="2021-1-2-15：00"   >          <a href="#2021-1-2-15：00" class="heading-link"><i class="fas fa-link"></i></a>2021.1.2 /15：00</h6>      <p>等下个星期考试结束之后。好好写一篇有关于的2020的总结。<br>并且认真规划好2021的计划。</p>]]></content>
+    <content type="html"><![CDATA[<p>一些关于本人的2020总结，内容实属惨不忍睹，所以建议不读….</p>        <h6 id="2021-1-14-21-40"   >          <a href="#2021-1-14-21-40" class="heading-link"><i class="fas fa-link"></i></a>2021.1.14 /21:40</h6>              <h6 id="2020-1-8月"   >          <a href="#2020-1-8月" class="heading-link"><i class="fas fa-link"></i></a>2020 1-8月</h6>      <p>上半年在家里面，可以说是什么也没有学习，什么也没有做。有的时候突然想起那段记忆都是空白的。不知道自己每天都做了些什么。<br>一月二月在家里可能就是每天都在玩吧。至少在我仅有的记忆里面，那段记忆里面自己就是天天在家无所事事。<br>三月四月的时候。脑子里面每天都想着开学和减肥。稍稍成功一点的就是在三四月的时候减肥成功了（<del>10斤</del>），当时也不知道哪里来的毅力成功了。虽然现在已经回弹了，但是至少在当时成功了。就还是很开心的。<br>五六月的时候记不太清楚了。依旧是没天盼着开学，每天盼着能回到学校，自己的内心也是知道自己在家里面很颓。所以很想回到学校，想回去学习。那个时候开始学习了一点HTML和CSS，到现在还在用。陆陆续续，慢慢的学了很久。虽然视频也不多。最开始学个导航栏都写了一个晚上。有的时候真的觉得自己还是太笨了。<br>七八月份……更不知道自己在干嘛了…..</p><p>可能上半年来最大的收获就是学了HTML和CSS吧…….说起来我都不好意思，两个那么简单的东西，自己花了大半年……</p>        <h6 id="2020-9-12月"   >          <a href="#2020-9-12月" class="heading-link"><i class="fas fa-link"></i></a>2020 9-12月</h6>      <p>下半年回到学校之后，先是搬了校区。开始了大二上的学习任务。大二真的很忙很忙很忙……,莫名其妙自己就变成了大二老学姐了……九十月份自己慢慢适应了大二的学习节奏，期间把css复习了一遍，当时还是想走前端的，安安心心做一个前端。如果说是什么改变可我的想法，其实我自己也说不清楚，就像现在我自己也还是觉得自己更加适合做前端，但是自己已经在学习网安了，就好好学网安吧！<br>下半年一个偶然的机会进入了信息安全兴趣班，当时本着想找个位置安安静静的学习（我要是知道我后面可以进计协的话我一定再等等…..）后面有着大二大三的学长，在兴趣班给我们入门网安，好像又开始慢慢接触网安了。到现在自己其实也不是很能确定自己是不是适合这个专业。<br>整个方向真的需要自己好多好多的知识，而我总是无法把这些知识穿在一起，有的时候就学起来真的很困难……<br>在兴趣班好好学习，后面选进了505的网安实验室。有黄洪老师带着学习。虽然我实在没有感受到有老师带着的好处…….<br>十月份的是时候和睿宝和超鹏一起参加了国信安。可能学的HTML和CSS终于有点了用处。自己亲手做了一个静态的的页面。有些内容只有自己做了之后才算是真的自己学会了。国信安的项目最后也是提交了。对于我自己来说，我还是很满意的。</p><p>下半年的学习就是，参加了国信安的项目。学习了有关网络安全的一些知识…..mysql增删改查….Java基础？十大漏洞简介？…… </p>        <h6 id="2021-1-2-15：00"   >          <a href="#2021-1-2-15：00" class="heading-link"><i class="fas fa-link"></i></a>2021.1.2 /15：00</h6>      <p>等下个星期考试结束之后。好好写一篇有关于的2020的总结。<br>并且认真规划好2021的计划。</p>]]></content>
     
     
       
       
-    <summary type="html">
-        &lt;h6 id=&quot;2021-1-2-15：00&quot;   &gt;
-          &lt;a href=&quot;#2021-1-2-15：00&quot; class=&quot;heading-link&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;2021.1.2 /15：00</summary>
+    <summary type="html">&lt;p&gt;一些关于本人的2020总结，内容实属惨不忍睹，所以建议不读….&lt;/p&gt;
+
+        &lt;h6 id=&quot;2021-1-14-21-40&quot;   &gt;
+          &lt;a href=&quot;#2021-1-14-21-40&quot; class=&quot;heading-link&quot;&gt;&lt;i cl</summary>
       
     
     
