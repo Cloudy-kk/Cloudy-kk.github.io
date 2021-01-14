@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-01-02T07:02:13.778Z</updated>
+  <updated>2021-01-02T07:03:19.155Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2021/01/02/2020Summary/"/>
     <id>http://example.com/2021/01/02/2020Summary/</id>
     <published>2021-01-02T06:56:01.104Z</published>
-    <updated>2021-01-02T07:02:13.778Z</updated>
+    <updated>2021-01-02T07:03:19.155Z</updated>
     
-    <content type="html"><![CDATA[        <h6 id="2021-1-2-15：00"   >          <a href="#2021-1-2-15：00" class="heading-link"><i class="fas fa-link"></i></a>2021.1.2 /15：00</h6>      <pre><code>等下个星期考试结束之后。好好写一篇有关于的2020的总结。并且认真规划好2021的计划。</code></pre>]]></content>
+    <content type="html"><![CDATA[        <h6 id="2021-1-2-15：00"   >          <a href="#2021-1-2-15：00" class="heading-link"><i class="fas fa-link"></i></a>2021.1.2 /15：00</h6>      <p>等下个星期考试结束之后。好好写一篇有关于的2020的总结。<br>并且认真规划好2021的计划。</p>]]></content>
     
     
       
