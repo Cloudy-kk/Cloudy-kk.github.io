@@ -1,30 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>我的第一篇博客</title>
-    <url>/2020/12/28/Fist/</url>
-    <content><![CDATA[<p>踩踩雷，各种报错之后，也是搭建好了这个完整的blog<br>（至少目前来看对于我来时说完整的…..以后有问题以后再说吧)</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>Fist Blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2020/12/28/ctf1/</url>
-    <content><![CDATA[<hr>
-
-        <h2 id="title-CTF题目–获取备份文件"   >
-          <a href="#title-CTF题目–获取备份文件" class="heading-link"><i class="fas fa-link"></i></a>title :CTF题目–获取备份文件</h2>
-      ]]></content>
-  </entry>
-  <entry>
     <title>2020总结</title>
     <url>/2021/01/02/2020Summary/</url>
     <content><![CDATA[<p>一些关于本人的2020总结，内容实属惨不忍睹，所以建议不读….</p>
+<a id="more"></a>
 
         <h6 id="2021-1-14-21-40"   >
           <a href="#2021-1-14-21-40" class="heading-link"><i class="fas fa-link"></i></a>2021.1.14 /21:40</h6>
@@ -46,26 +26,23 @@
   </entry>
   <entry>
     <title></title>
-    <url>/2021/01/14/hello/</url>
-    <content><![CDATA[<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
-    <style>
-        .vcontent p
-        {
-            color: #bbffaa;
-        }
-    </style>
-</head>
-<body>
-    <div class="vcontent">
-        <p>hello</p>
-    </div>
-</body>
-</html>]]></content>
+    <url>/2020/12/28/ctf1/</url>
+    <content><![CDATA[<hr>
+
+        <h2 id="title-CTF题目–获取备份文件"   >
+          <a href="#title-CTF题目–获取备份文件" class="heading-link"><i class="fas fa-link"></i></a>title :CTF题目–获取备份文件</h2>
+      ]]></content>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2020/12/28/Fist/</url>
+    <content><![CDATA[<p>踩踩雷，各种报错之后，也是搭建好了这个完整的blog<br>（至少目前来看对于我来时说完整的…..以后有问题以后再说吧)</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>Fist Blog</tag>
+      </tags>
   </entry>
 </search>
