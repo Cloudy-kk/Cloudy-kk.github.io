@@ -1,6 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>第一次使用MSF，永恒之蓝漏洞 进入Windows 7的过程</title>
+    <url>/2021/01/18/fistUse%20MSF/</url>
+    <content><![CDATA[<p>还是很激动的一个过程，大佬绕过….此处记录一下一个小菜鸡第一次用MSF的过程，有些激动</p>
+<a id="more"></a>
+
+        <h6 id="本案例讲的是用永恒之蓝攻击Windows-7的一个过程"   >
+          <a href="#本案例讲的是用永恒之蓝攻击Windows-7的一个过程" class="heading-link"><i class="fas fa-link"></i></a>本案例讲的是用永恒之蓝攻击Windows 7的一个过程</h6>
+      <p>1.第一次使用msf的时候，都需要进行一个初始化的过程</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylmFg.png" width="80%" height="80%"></div>
+2.进入msf
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylMSs.png" width="80%" height="80%"></div>
+3.前一篇文章讲到安装的Nessus就是用于漏洞扫描的一个工具，通过扫描工具知道该含有什么漏洞，知道漏洞编码之后，在kali中输入
+
+<pre><code>search &lt;关键字&gt;</code></pre>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylnYQ.png" width="80%" height="80%"></div>
+4.加载攻击模块
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylZTS.png" width="80%" height="80%"></div>
+5.查看配置相关信息
+（这里是先用show options检查一遍里面的信息有没有错误然后进行没有填写的信息填写）
+
+<pre><code>show options
+set &lt;...&gt; </code></pre>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syluWj.png" width="80%" height="80%"></div>
+
+<p>6.检查版本，选择要应该使用的该版本的</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylQln.png" width="80%" height="80%"></div>
+7.攻击
+
+<pre><code>run/exploit</code></pre>
+<p>进入成功之后就是这样的。</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syl1O0.png" width="80%" height="80%"></div>
+失败的话会提示这个（最下面一行）
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sy1enx.png" width="80%" height="80%"></div>
+8.可以输入
+
+<pre><code>help</code></pre>
+<p>查看有哪些功能<br>下面是一次截屏</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syl8mV.png" width="80%" height="80%"></div>
+
+<p>总结：总之就还是挺有成就感的。MSF大部分的攻击都是这个过程。熟悉一点，以后再厉害一点！！！</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>记一次kali的Nessus的安装</title>
+    <url>/2021/01/17/firstScans/</url>
+    <content><![CDATA[<p>由于学习中要用到Nessus，今天在安装的过程中遇到了几个问题，记录一下。</p>
+<a id="more"></a>
+
+        <h4 id="安装过程"   >
+          <a href="#安装过程" class="heading-link"><i class="fas fa-link"></i></a>安装过程</h4>
+      <p>Nessus安装的教程在网上有很多。前面步骤都是一样的。在网上下载好两个压缩包，拖到kal里面去</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/17/syKgYj.png" width="80%" height="80%"></div>
+
+
+        <h4 id="问题"   >
+          <a href="#问题" class="heading-link"><i class="fas fa-link"></i></a>问题</h4>
+      
+        <h5 id="1-进入Nessus之后没有Scans页面，只有Setting"   >
+          <a href="#1-进入Nessus之后没有Scans页面，只有Setting" class="heading-link"><i class="fas fa-link"></i></a>1.进入Nessus之后没有Scans页面，只有Setting</h5>
+      <p>这个问题是因为之前在网上找教程安装的时候，很多教程显示在初始化选择版本选的是第四个。</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syMrg1.png" width="50%" height="50%"></div>
+但其实在选择第四个的时候选的是管理版本。进入界面之后就没有Scans页面。
+
+<p>解决方法也很简单<br>1.页面更新加载进入https：//localhost：8834<br>2.在setting页面选择如下</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syMx8s.png" width="80%" height="80%"></div>
+点击小笔之后输入之前发在邮箱里面的激活码，然后页面会跳到加载进度条那页，后面进去之后就好了
+
+
+        <h5 id="2-更新进度条回滚，无法加载出来"   >
+          <a href="#2-更新进度条回滚，无法加载出来" class="heading-link"><i class="fas fa-link"></i></a>2.更新进度条回滚，无法加载出来</h5>
+      <div align=center><img src="https://s3.ax1x.com/2021/01/18/syMz2n.png" width="80%" height="80%"></div>
+说真的，这个问题今天难倒了班上一半的同学，具体原因是什么不是很知道，网上说法也不一致。
+
+
+<p><strong>解决方法</strong><br>重装。简单粗暴，我是把kali直接移除了重装的。但是我觉得可能是我之前由于版本选错了的原因，一个restart了好几次…..卡死了？<br>由于我在装的时候，网上的办法我都试过了，如果你试过了有用，那就当我没说！但是如果还没打算尝试！建议直接卸载重装……</p>
+<p>（但是不得不说，波哥发的那个kali的包真的好用！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>2020总结</title>
     <url>/2021/01/02/2020Summary/</url>
     <content><![CDATA[<p>一些关于本人的2020总结，内容实属惨不忍睹，所以建议不读….</p>
