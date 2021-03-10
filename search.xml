@@ -1,114 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Python学习笔记</title>
-    <url>/2021/03/10/python/</url>
-    <content><![CDATA[
-        <h1 id="面向对象"   >
-          <a href="#面向对象" class="heading-link"><i class="fas fa-link"></i></a>面向对象</h1>
+    <title>2020总结</title>
+    <url>/2021/01/02/2020Summary/</url>
+    <content><![CDATA[<p>一些关于本人的2020总结，内容实属惨不忍睹，所以建议不读….</p>
+<a id="more"></a>
+
+        <h6 id="2021-1-14-21-40"   >
+          <a href="#2021-1-14-21-40" class="heading-link"><i class="fas fa-link"></i></a>2021.1.14 /21:40</h6>
       
-        <h2 id="封装"   >
-          <a href="#封装" class="heading-link"><i class="fas fa-link"></i></a>封装</h2>
-      
-        <h3 id="内置函数-dir"   >
-          <a href="#内置函数-dir" class="heading-link"><i class="fas fa-link"></i></a>内置函数 dir</h3>
-      <figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="built_in">dir</span> 变量名</span><br></pre></td></tr></table></div></figure>
-<p>查看所有的方法（内置方法、属性）</p>
-<hr>
+        <h6 id="2020-1-8月"   >
+          <a href="#2020-1-8月" class="heading-link"><i class="fas fa-link"></i></a>2020 1-8月</h6>
+      <p>上半年在家里面，可以说是什么也没有学习，什么也没有做。有的时候突然想起那段记忆都是空白的。不知道自己每天都做了些什么。<br>一月二月在家里可能就是每天都在玩吧。至少在我仅有的记忆里面，那段记忆里面自己就是天天在家无所事事。<br>三月四月的时候。脑子里面每天都想着开学和减肥。稍稍成功一点的就是在三四月的时候减肥成功了（<del>10斤</del>），当时也不知道哪里来的毅力成功了。虽然现在已经回弹了，但是至少在当时成功了。就还是很开心的。<br>五六月的时候记不太清楚了。依旧是没天盼着开学，每天盼着能回到学校，自己的内心也是知道自己在家里面很颓。所以很想回到学校，想回去学习。那个时候开始学习了一点HTML和CSS，到现在还在用。陆陆续续，慢慢的学了很久。虽然视频也不多。最开始学个导航栏都写了一个晚上。有的时候真的觉得自己还是太笨了。<br>七八月份……更不知道自己在干嘛了…..</p>
+<p>可能上半年来最大的收获就是学了HTML和CSS吧…….说起来我都不好意思，两个那么简单的东西，自己花了大半年……</p>
 
-        <h3 id="定义类"   >
-          <a href="#定义类" class="heading-link"><i class="fas fa-link"></i></a>定义类</h3>
-      <figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 类名</span></span><br><span class="line"><span class="class">    <span class="title">def</span> 方法名（<span class="title">self</span>）</span></span><br><span class="line"><span class="class">        <span class="title">pass</span></span></span><br></pre></td></tr></table></div></figure>
-<hr>
+        <h6 id="2020-9-12月"   >
+          <a href="#2020-9-12月" class="heading-link"><i class="fas fa-link"></i></a>2020 9-12月</h6>
+      <p>下半年回到学校之后，先是搬了校区。开始了大二上的学习任务。大二真的很忙很忙很忙……,莫名其妙自己就变成了大二老学姐了……九十月份自己慢慢适应了大二的学习节奏，期间把css复习了一遍，当时还是想走前端的，安安心心做一个前端。如果说是什么改变可我的想法，其实我自己也说不清楚，就像现在我自己也还是觉得自己更加适合做前端，但是自己已经在学习网安了，就好好学网安吧！<br>下半年一个偶然的机会进入了信息安全兴趣班，当时本着想找个位置安安静静的学习（我要是知道我后面可以进计协的话我一定再等等…..）后面有着大二大三的学长，在兴趣班给我们入门网安，好像又开始慢慢接触网安了。到现在自己其实也不是很能确定自己是不是适合这个专业。<br>整个方向真的需要自己好多好多的知识，而我总是无法把这些知识穿在一起，有的时候就学起来真的很困难……<br>在兴趣班好好学习，后面选进了505的网安实验室。有黄洪老师带着学习。虽然我实在没有感受到有老师带着的好处…….<br>十月份的是时候和睿宝和超鹏一起参加了国信安。可能学的HTML和CSS终于有点了用处。自己亲手做了一个静态的的页面。有些内容只有自己做了之后才算是真的自己学会了。国信安的项目最后也是提交了。对于我自己来说，我还是很满意的。</p>
+<p>下半年的学习就是，参加了国信安的项目。学习了有关网络安全的一些知识…..mysql增删改查….Java基础？十大漏洞简介？…… </p>
 
-        <h3 id="创建对象"   >
-          <a href="#创建对象" class="heading-link"><i class="fas fa-link"></i></a>创建对象</h3>
-      <figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line">对象变量.name = 类名（）</span><br></pre></td></tr></table></div></figure>
-<hr>
-
-        <h3 id="创建变量"   >
-          <a href="#创建变量" class="heading-link"><i class="fas fa-link"></i></a>创建变量</h3>
-      <p>初始化实例</p>
-<pre><code>变量名=类名（）</code></pre>
-<hr>
-
-        <h3 id="初始化方法"   >
-          <a href="#初始化方法" class="heading-link"><i class="fas fa-link"></i></a>初始化方法</h3>
-      
-        <h5 id="当创建一个对象的时候："   >
-          <a href="#当创建一个对象的时候：" class="heading-link"><i class="fas fa-link"></i></a>当创建一个对象的时候：</h5>
-      <p>1.分配空间</p>
-<p>2.初始化方法（为属性设置初始值）</p>
-<ul>
-<li><p>__init__方法：专门定义一个类指定这个类中包含哪些属性</p>
-<p>  <code>self.属性名 = 属性的初始值</code> </p>
-</li>
-</ul>
-<ul>
-<li>在方法内部使用 <code>self.属性 = 形参</code> 接收外部传递的参数</li>
-</ul>
-<p>在创建对象的时候，使用<code>类名（属性1，属性2…）</code>调用</p>
-<p><b>__del__方法</b>：对象在被销毁前，还可以做的事情<br><b>__str___方法</b>：必须返回一个字符串</p>
-<hr>
-
-        <h1 id="继承"   >
-          <a href="#继承" class="heading-link"><i class="fas fa-link"></i></a>继承</h1>
-      <p>单继承/多继承</p>
-
-        <h5 id="单继承"   >
-          <a href="#单继承" class="heading-link"><i class="fas fa-link"></i></a>单继承</h5>
-      <pre><code>class B(A)</code></pre>
-
-        <h5 id="多继承"   >
-          <a href="#多继承" class="heading-link"><i class="fas fa-link"></i></a>多继承</h5>
-      <pre><code>class C(A,B)</code></pre>
-<p>如果多继承的当中的父类中方法的名字重了。按照继承的顺序来</p>
-
-        <h6 id="MRO方法–方法搜索顺序"   >
-          <a href="#MRO方法–方法搜索顺序" class="heading-link"><i class="fas fa-link"></i></a>MRO方法–方法搜索顺序</h6>
-      
-        <h3 id="子类的方法"   >
-          <a href="#子类的方法" class="heading-link"><i class="fas fa-link"></i></a>子类的方法</h3>
-      <p>创建子类的时候，父类必须包含在当前问价中。且位于子类前面</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ElectricCar</span>(<span class="params">Car</span>)</span></span><br><span class="line"><span class="class">    <span class="title">def</span> <span class="title">__init__</span>(<span class="params">self,make,model,year</span>)</span></span><br><span class="line"><span class="class">        # 初始化父类的属性</span></span><br><span class="line"><span class="class">        <span class="title">super</span>().<span class="title">__init__</span>(<span class="params">self,make,model,year</span>)</span></span><br><span class="line"><span class="class"></span></span><br></pre></td></tr></table></div></figure>
-
-
-
-        <h3 id="方法重写"   >
-          <a href="#方法重写" class="heading-link"><i class="fas fa-link"></i></a>方法重写</h3>
-      
-        <h4 id="方法重写。-覆盖方法"   >
-          <a href="#方法重写。-覆盖方法" class="heading-link"><i class="fas fa-link"></i></a>方法重写。(覆盖方法)</h4>
-      <p>在子类中定义一个同名的方法就可以了</p>
-
-        <h3 id="方法重写（拓展父类方法）"   >
-          <a href="#方法重写（拓展父类方法）" class="heading-link"><i class="fas fa-link"></i></a>方法重写（拓展父类方法）</h3>
-      <p>原本封装的方法不能满足子类。重写之后又在父类的基础上拓展</p>
-<ul>
-<li><p>重写方法</p>
-</li>
-<li><p>利用super调用父类的方法</p>
-</li>
-<li><p>添加内容</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Run</span>(<span class="params">self</span>)</span></span><br><span class="line"><span class="function">    <span class="title">print</span>(<span class="params"><span class="string">&quot;小鸟会飞&quot;</span></span>)  #</span></span><br><span class="line"><span class="function">    <span class="title">super</span>().<span class="title">fly</span>()   #使用<span class="title">super</span> ，调用原来在父类中封装的方法</span></span><br><span class="line"><span class="function">    <span class="title">print</span>(<span class="params"><span class="string">&quot;$%$^#%#$^$^&quot;</span></span>) #添加其他的代码</span></span><br></pre></td></tr></table></div></figure>
-
-        <h3 id="私有属性，私有方法"   >
-          <a href="#私有属性，私有方法" class="heading-link"><i class="fas fa-link"></i></a>私有属性，私有方法</h3>
-      </li>
-<li><p>在属性名或者方法前增加 <code>两个下划线 __ </code> 定义的就是私有属性</p>
-</li>
-<li><p>私有属性在外界不能被直接访问。只能在类中自己使用</p>
-</li>
-<li><p>python是没有真正的私有, python解释器在处理私有属性，实际上是对名称做了一些特殊的 处理，使得外界无法访问到</p>
-</li>
-<li><p>*在外界访问**：<code>_类名__私有变量名</code></p>
-</li>
-<li><p><strong>子类对象 不能在 自己的方法内部，直接访问父类的 私有属性或者私有方法</strong></p>
-</li>
-<li><p><strong>子类对象可以通过父类访问 父类的公有方法 从而间接访问到私有方法和私有属性</strong><br>通过父类的公有方法 在公有方法中间接访问私有方法和私有属性</p>
-</li>
-</ul>
+        <h6 id="2021-1-2-15：00"   >
+          <a href="#2021-1-2-15：00" class="heading-link"><i class="fas fa-link"></i></a>2021.1.2 /15：00</h6>
+      <p>等下个星期考试结束之后。好好写一篇有关于的2020的总结。<br>并且认真规划好2021的计划。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>记一次kali的Nessus的安装</title>
+    <url>/2021/01/17/firstScans/</url>
+    <content><![CDATA[<p>由于学习中要用到Nessus，今天在安装的过程中遇到了几个问题，记录一下。</p>
+<a id="more"></a>
+
+        <h4 id="安装过程"   >
+          <a href="#安装过程" class="heading-link"><i class="fas fa-link"></i></a>安装过程</h4>
+      <p>Nessus安装的教程在网上有很多。前面步骤都是一样的。在网上下载好两个压缩包，拖到kali 里面去</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/17/syKgYj.png" width="80%" height="80%"></div>
+
+
+        <h4 id="问题"   >
+          <a href="#问题" class="heading-link"><i class="fas fa-link"></i></a>问题</h4>
+      
+        <h5 id="1-进入Nessus之后没有Scans页面，只有Setting"   >
+          <a href="#1-进入Nessus之后没有Scans页面，只有Setting" class="heading-link"><i class="fas fa-link"></i></a>1.进入Nessus之后没有Scans页面，只有Setting</h5>
+      <p>这个问题是因为之前在网上找教程安装的时候，很多教程显示在初始化选择版本选的是第四个。</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syMrg1.png" width="50%" height="50%"></div>
+但其实在选择第四个的时候选的是管理版本。进入界面之后就没有Scans页面。
+
+<p>解决方法也很简单<br>1.页面更新加载进入https：//localhost：8834<br>2.在setting页面选择如下</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syMx8s.png" width="80%" height="80%"></div>
+点击小笔之后输入之前发在邮箱里面的激活码，然后页面会跳到加载进度条那页，后面进去之后就好了
+
+
+        <h5 id="2-更新进度条回滚，无法加载出来"   >
+          <a href="#2-更新进度条回滚，无法加载出来" class="heading-link"><i class="fas fa-link"></i></a>2.更新进度条回滚，无法加载出来</h5>
+      <div align=center><img src="https://s3.ax1x.com/2021/01/18/syMz2n.png" width="80%" height="80%"></div>
+说真的，这个问题今天难倒了班上一半的同学，具体原因是什么不是很知道，网上说法也不一致。
+
+
+<p><strong>解决方法</strong><br>重装。简单粗暴，我是把kali直接移除了重装的。但是我觉得可能是我之前由于版本选错了的原因，一个restart了好几次…..卡死了？<br>由于我在装的时候，网上的办法我都试过了，如果你试过了有用，那就当我没说！但是如果还没打算尝试！建议直接卸载重装……</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2020/12/28/Fist/</url>
+    <content><![CDATA[<p>踩踩雷，各种报错之后，也是搭建好了这个完整的blog<br>（至少目前来看对于我来时说完整的…..以后有问题以后再说吧)</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>Fist Blog</tag>
+      </tags>
   </entry>
   <entry>
     <title>第一次使用MSF，永恒之蓝漏洞 进入Windows 7的过程</title>
@@ -184,74 +145,116 @@
 ]]></content>
   </entry>
   <entry>
-    <title>记一次kali的Nessus的安装</title>
-    <url>/2021/01/17/firstScans/</url>
-    <content><![CDATA[<p>由于学习中要用到Nessus，今天在安装的过程中遇到了几个问题，记录一下。</p>
-<a id="more"></a>
+    <title>Python学习笔记</title>
+    <url>/2021/03/10/python/</url>
+    <content><![CDATA[<a id="more"></a> 
 
-        <h4 id="安装过程"   >
-          <a href="#安装过程" class="heading-link"><i class="fas fa-link"></i></a>安装过程</h4>
-      <p>Nessus安装的教程在网上有很多。前面步骤都是一样的。在网上下载好两个压缩包，拖到kali 里面去</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/17/syKgYj.png" width="80%" height="80%"></div>
+        <h1 id="面向对象"   >
+          <a href="#面向对象" class="heading-link"><i class="fas fa-link"></i></a>面向对象</h1>
+      <hr>
 
-
-        <h4 id="问题"   >
-          <a href="#问题" class="heading-link"><i class="fas fa-link"></i></a>问题</h4>
+        <h2 id="封装"   >
+          <a href="#封装" class="heading-link"><i class="fas fa-link"></i></a>封装</h2>
       
-        <h5 id="1-进入Nessus之后没有Scans页面，只有Setting"   >
-          <a href="#1-进入Nessus之后没有Scans页面，只有Setting" class="heading-link"><i class="fas fa-link"></i></a>1.进入Nessus之后没有Scans页面，只有Setting</h5>
-      <p>这个问题是因为之前在网上找教程安装的时候，很多教程显示在初始化选择版本选的是第四个。</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/syMrg1.png" width="50%" height="50%"></div>
-但其实在选择第四个的时候选的是管理版本。进入界面之后就没有Scans页面。
+        <h3 id="内置函数-dir"   >
+          <a href="#内置函数-dir" class="heading-link"><i class="fas fa-link"></i></a>内置函数 dir</h3>
+      <figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="built_in">dir</span> 变量名</span><br></pre></td></tr></table></div></figure>
+<p>查看所有的方法（内置方法、属性）</p>
+<hr>
 
-<p>解决方法也很简单<br>1.页面更新加载进入https：//localhost：8834<br>2.在setting页面选择如下</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/syMx8s.png" width="80%" height="80%"></div>
-点击小笔之后输入之前发在邮箱里面的激活码，然后页面会跳到加载进度条那页，后面进去之后就好了
+        <h3 id="定义类"   >
+          <a href="#定义类" class="heading-link"><i class="fas fa-link"></i></a>定义类</h3>
+      <figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 类名</span></span><br><span class="line"><span class="class">    <span class="title">def</span> 方法名（<span class="title">self</span>）</span></span><br><span class="line"><span class="class">        <span class="title">pass</span></span></span><br></pre></td></tr></table></div></figure>
+<hr>
 
+        <h3 id="创建对象"   >
+          <a href="#创建对象" class="heading-link"><i class="fas fa-link"></i></a>创建对象</h3>
+      <figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line">对象变量.name = 类名（）</span><br></pre></td></tr></table></div></figure>
+<hr>
 
-        <h5 id="2-更新进度条回滚，无法加载出来"   >
-          <a href="#2-更新进度条回滚，无法加载出来" class="heading-link"><i class="fas fa-link"></i></a>2.更新进度条回滚，无法加载出来</h5>
-      <div align=center><img src="https://s3.ax1x.com/2021/01/18/syMz2n.png" width="80%" height="80%"></div>
-说真的，这个问题今天难倒了班上一半的同学，具体原因是什么不是很知道，网上说法也不一致。
+        <h3 id="创建变量"   >
+          <a href="#创建变量" class="heading-link"><i class="fas fa-link"></i></a>创建变量</h3>
+      <p>初始化实例</p>
+<pre><code>变量名=类名（）</code></pre>
+<hr>
 
-
-<p><strong>解决方法</strong><br>重装。简单粗暴，我是把kali直接移除了重装的。但是我觉得可能是我之前由于版本选错了的原因，一个restart了好几次…..卡死了？<br>由于我在装的时候，网上的办法我都试过了，如果你试过了有用，那就当我没说！但是如果还没打算尝试！建议直接卸载重装……</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>2020总结</title>
-    <url>/2021/01/02/2020Summary/</url>
-    <content><![CDATA[<p>一些关于本人的2020总结，内容实属惨不忍睹，所以建议不读….</p>
-<a id="more"></a>
-
-        <h6 id="2021-1-14-21-40"   >
-          <a href="#2021-1-14-21-40" class="heading-link"><i class="fas fa-link"></i></a>2021.1.14 /21:40</h6>
+        <h3 id="初始化方法"   >
+          <a href="#初始化方法" class="heading-link"><i class="fas fa-link"></i></a>初始化方法</h3>
       
-        <h6 id="2020-1-8月"   >
-          <a href="#2020-1-8月" class="heading-link"><i class="fas fa-link"></i></a>2020 1-8月</h6>
-      <p>上半年在家里面，可以说是什么也没有学习，什么也没有做。有的时候突然想起那段记忆都是空白的。不知道自己每天都做了些什么。<br>一月二月在家里可能就是每天都在玩吧。至少在我仅有的记忆里面，那段记忆里面自己就是天天在家无所事事。<br>三月四月的时候。脑子里面每天都想着开学和减肥。稍稍成功一点的就是在三四月的时候减肥成功了（<del>10斤</del>），当时也不知道哪里来的毅力成功了。虽然现在已经回弹了，但是至少在当时成功了。就还是很开心的。<br>五六月的时候记不太清楚了。依旧是没天盼着开学，每天盼着能回到学校，自己的内心也是知道自己在家里面很颓。所以很想回到学校，想回去学习。那个时候开始学习了一点HTML和CSS，到现在还在用。陆陆续续，慢慢的学了很久。虽然视频也不多。最开始学个导航栏都写了一个晚上。有的时候真的觉得自己还是太笨了。<br>七八月份……更不知道自己在干嘛了…..</p>
-<p>可能上半年来最大的收获就是学了HTML和CSS吧…….说起来我都不好意思，两个那么简单的东西，自己花了大半年……</p>
+        <h5 id="当创建一个对象的时候："   >
+          <a href="#当创建一个对象的时候：" class="heading-link"><i class="fas fa-link"></i></a>当创建一个对象的时候：</h5>
+      <p>1.分配空间</p>
+<p>2.初始化方法（为属性设置初始值）</p>
+<ul>
+<li><p>__init__方法：专门定义一个类指定这个类中包含哪些属性</p>
+<p>  <code>self.属性名 = 属性的初始值</code> </p>
+</li>
+</ul>
+<ul>
+<li>在方法内部使用 <code>self.属性 = 形参</code> 接收外部传递的参数</li>
+</ul>
+<p>在创建对象的时候，使用<code>类名（属性1，属性2…）</code>调用</p>
+<p><b>__del__方法</b>：对象在被销毁前，还可以做的事情<br><b>__str___方法</b>：必须返回一个字符串</p>
+<hr>
 
-        <h6 id="2020-9-12月"   >
-          <a href="#2020-9-12月" class="heading-link"><i class="fas fa-link"></i></a>2020 9-12月</h6>
-      <p>下半年回到学校之后，先是搬了校区。开始了大二上的学习任务。大二真的很忙很忙很忙……,莫名其妙自己就变成了大二老学姐了……九十月份自己慢慢适应了大二的学习节奏，期间把css复习了一遍，当时还是想走前端的，安安心心做一个前端。如果说是什么改变可我的想法，其实我自己也说不清楚，就像现在我自己也还是觉得自己更加适合做前端，但是自己已经在学习网安了，就好好学网安吧！<br>下半年一个偶然的机会进入了信息安全兴趣班，当时本着想找个位置安安静静的学习（我要是知道我后面可以进计协的话我一定再等等…..）后面有着大二大三的学长，在兴趣班给我们入门网安，好像又开始慢慢接触网安了。到现在自己其实也不是很能确定自己是不是适合这个专业。<br>整个方向真的需要自己好多好多的知识，而我总是无法把这些知识穿在一起，有的时候就学起来真的很困难……<br>在兴趣班好好学习，后面选进了505的网安实验室。有黄洪老师带着学习。虽然我实在没有感受到有老师带着的好处…….<br>十月份的是时候和睿宝和超鹏一起参加了国信安。可能学的HTML和CSS终于有点了用处。自己亲手做了一个静态的的页面。有些内容只有自己做了之后才算是真的自己学会了。国信安的项目最后也是提交了。对于我自己来说，我还是很满意的。</p>
-<p>下半年的学习就是，参加了国信安的项目。学习了有关网络安全的一些知识…..mysql增删改查….Java基础？十大漏洞简介？…… </p>
+        <h2 id="继承"   >
+          <a href="#继承" class="heading-link"><i class="fas fa-link"></i></a>继承</h2>
+      <p>单继承/多继承</p>
 
-        <h6 id="2021-1-2-15：00"   >
-          <a href="#2021-1-2-15：00" class="heading-link"><i class="fas fa-link"></i></a>2021.1.2 /15：00</h6>
-      <p>等下个星期考试结束之后。好好写一篇有关于的2020的总结。<br>并且认真规划好2021的计划。</p>
+        <h3 id="单继承"   >
+          <a href="#单继承" class="heading-link"><i class="fas fa-link"></i></a>单继承</h3>
+      <pre><code>class B(A)</code></pre>
+
+        <h3 id="多继承"   >
+          <a href="#多继承" class="heading-link"><i class="fas fa-link"></i></a>多继承</h3>
+      <pre><code>class C(A,B)</code></pre>
+<p>如果多继承的当中的父类中方法的名字重了。按照继承的顺序来</p>
+
+        <h3 id="MRO方法–方法搜索顺序"   >
+          <a href="#MRO方法–方法搜索顺序" class="heading-link"><i class="fas fa-link"></i></a>MRO方法–方法搜索顺序</h3>
+      <hr>
+
+        <h3 id="子类的方法"   >
+          <a href="#子类的方法" class="heading-link"><i class="fas fa-link"></i></a>子类的方法</h3>
+      <p>创建子类的时候，父类必须包含在当前问价中。且位于子类前面</p>
+<figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ElectricCar</span>(<span class="params">Car</span>)</span></span><br><span class="line"><span class="class">    <span class="title">def</span> <span class="title">__init__</span>(<span class="params">self,make,model,year</span>)</span></span><br><span class="line"><span class="class">        # 初始化父类的属性</span></span><br><span class="line"><span class="class">        <span class="title">super</span>().<span class="title">__init__</span>(<span class="params">self,make,model,year</span>)</span></span><br><span class="line"><span class="class"></span></span><br></pre></td></tr></table></div></figure>
+
+
+
+        <h3 id="方法重写"   >
+          <a href="#方法重写" class="heading-link"><i class="fas fa-link"></i></a>方法重写</h3>
+      
+        <h4 id="方法重写。-覆盖方法"   >
+          <a href="#方法重写。-覆盖方法" class="heading-link"><i class="fas fa-link"></i></a>方法重写。(覆盖方法)</h4>
+      <p>在子类中定义一个同名的方法就可以了</p>
+
+        <h3 id="方法重写（拓展父类方法）"   >
+          <a href="#方法重写（拓展父类方法）" class="heading-link"><i class="fas fa-link"></i></a>方法重写（拓展父类方法）</h3>
+      <p>原本封装的方法不能满足子类。重写之后又在父类的基础上拓展</p>
+<ul>
+<li><p>重写方法</p>
+</li>
+<li><p>利用super调用父类的方法</p>
+</li>
+<li><p>添加内容</p>
+<figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Run</span>(<span class="params">self</span>)</span></span><br><span class="line"><span class="function">    <span class="title">print</span>(<span class="params"><span class="string">&quot;小鸟会飞&quot;</span></span>)  #</span></span><br><span class="line"><span class="function">    <span class="title">super</span>().<span class="title">fly</span>()   #使用<span class="title">super</span> ，调用原来在父类中封装的方法</span></span><br><span class="line"><span class="function">    <span class="title">print</span>(<span class="params"><span class="string">&quot;$%$^#%#$^$^&quot;</span></span>) #添加其他的代码</span></span><br></pre></td></tr></table></div></figure>
+
+        <h3 id="私有属性，私有方法"   >
+          <a href="#私有属性，私有方法" class="heading-link"><i class="fas fa-link"></i></a>私有属性，私有方法</h3>
+      </li>
+<li><p>在属性名或者方法前增加 <code>两个下划线 __ </code> 定义的就是私有属性</p>
+</li>
+<li><p>私有属性在外界不能被直接访问。只能在类中自己使用</p>
+</li>
+<li><p>python是没有真正的私有, python解释器在处理私有属性，实际上是对名称做了一些特殊的 处理，使得外界无法访问到</p>
+</li>
+<li><p>*在外界访问**：<code>_类名__私有变量名</code></p>
+</li>
+<li><p><strong>子类对象 不能在 自己的方法内部，直接访问父类的 私有属性或者私有方法</strong></p>
+</li>
+<li><p><strong>子类对象可以通过父类访问 父类的公有方法 从而间接访问到私有方法和私有属性</strong><br>通过父类的公有方法 在公有方法中间接访问私有方法和私有属性</p>
+</li>
+</ul>
 ]]></content>
-  </entry>
-  <entry>
-    <title>我的第一篇博客</title>
-    <url>/2020/12/28/Fist/</url>
-    <content><![CDATA[<p>踩踩雷，各种报错之后，也是搭建好了这个完整的blog<br>（至少目前来看对于我来时说完整的…..以后有问题以后再说吧)</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>Fist Blog</tag>
-      </tags>
   </entry>
 </search>

@@ -908,7 +908,7 @@ body::after {
   z-index: 0;
   width: 100%;
   height: 100%;
-  background: url("/images/background_1.jpg") no-repeat center/cover;
+  background: url("https://s3.ax1x.com/2021/01/18/syUX38.jpg") no-repeat center/cover;
 }
 .header-banner::before {
   content: '';
@@ -1141,15 +1141,6 @@ body::after {
   white-space: normal;
   word-wrap: break-word;
   word-break: break-word;
-}
-.sidebar-toc .toc-child {
-  display: none;
-}
-.sidebar-toc .active > .toc-child {
-  display: block;
-}
-.sidebar-toc .current > .toc-child {
-  display: block;
 }
 .sidebar-toc .active > a,
 .sidebar-toc .current > a {
