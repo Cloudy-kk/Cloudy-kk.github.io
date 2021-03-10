@@ -1,9 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>我的第一篇博客</title>
+    <url>/2020/12/28/Fist/</url>
+    <content><![CDATA[<p>踩踩雷，各种报错之后，也是搭建好了这个完整的blog<br>（至少目前来看对于我来时说完整的…..以后有问题以后再说吧)</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>Fist Blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记一次kali的Nessus的安装</title>
+    <url>/2021/01/17/firstScans/</url>
+    <content><![CDATA[<p>由于学习中要用到Nessus，今天在安装的过程中遇到了几个问题，记录一下。</p>
+<a id="more"></a>
+
+        <h4 id="安装过程"   >
+          <a href="#安装过程" class="heading-link"><i class="fas fa-link"></i></a>安装过程</h4>
+      <p>Nessus安装的教程在网上有很多。前面步骤都是一样的。在网上下载好两个压缩包，拖到kali 里面去</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/17/syKgYj.png" width="80%" height="80%"></div>
+
+
+        <h4 id="问题"   >
+          <a href="#问题" class="heading-link"><i class="fas fa-link"></i></a>问题</h4>
+      
+        <h5 id="1-进入Nessus之后没有Scans页面，只有Setting"   >
+          <a href="#1-进入Nessus之后没有Scans页面，只有Setting" class="heading-link"><i class="fas fa-link"></i></a>1.进入Nessus之后没有Scans页面，只有Setting</h5>
+      <p>这个问题是因为之前在网上找教程安装的时候，很多教程显示在初始化选择版本选的是第四个。</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syMrg1.png" width="50%" height="50%"></div>
+但其实在选择第四个的时候选的是管理版本。进入界面之后就没有Scans页面。
+
+<p>解决方法也很简单<br>1.页面更新加载进入https：//localhost：8834<br>2.在setting页面选择如下</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syMx8s.png" width="80%" height="80%"></div>
+点击小笔之后输入之前发在邮箱里面的激活码，然后页面会跳到加载进度条那页，后面进去之后就好了
+
+
+        <h5 id="2-更新进度条回滚，无法加载出来"   >
+          <a href="#2-更新进度条回滚，无法加载出来" class="heading-link"><i class="fas fa-link"></i></a>2.更新进度条回滚，无法加载出来</h5>
+      <div align=center><img src="https://s3.ax1x.com/2021/01/18/syMz2n.png" width="80%" height="80%"></div>
+说真的，这个问题今天难倒了班上一半的同学，具体原因是什么不是很知道，网上说法也不一致。
+
+
+<p><strong>解决方法</strong><br>重装。简单粗暴，我是把kali直接移除了重装的。但是我觉得可能是我之前由于版本选错了的原因，一个restart了好几次…..卡死了？<br>由于我在装的时候，网上的办法我都试过了，如果你试过了有用，那就当我没说！但是如果还没打算尝试！建议直接卸载重装……</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>第一次使用MSF，永恒之蓝漏洞 进入Windows 7的过程</title>
+    <url>/2021/01/18/fistUse%20MSF/</url>
+    <content><![CDATA[<p>还是很激动的一个过程，大佬绕过….此处记录一下一个小菜鸡第一次用MSF的过程，有些激动</p>
+<a id="more"></a> 
+
+        <h3 id="前言"   >
+          <a href="#前言" class="heading-link"><i class="fas fa-link"></i></a>前言</h3>
+      <p> 本案例讲的是用利用永恒之蓝漏洞攻击Windows 7的一个过程</p>
+<ul>
+<li>永恒之蓝（Eternal Blue）<br>爆发于2017年4月14日晚，是一种利用Windows系统的<b>SMB协议</b>漏洞来获取系统的最高权限，以此来控制被入侵的计算机。甚至于2017年5月12日， 不法分子通过改造“永恒之蓝”制作了wannacry勒索病毒，使全世界大范围内遭受了该勒索病毒</li>
+<li>SMB<br>（全称是Server Message Block）是一个协议服务器信息块，它是一种客户机/服务器、请求/响应协议，通过SMB协议可以在计算机间共享文件、打印机、命名管道等资源，电脑上的网上邻居就是靠SMB实现的；SMB协议工作在应用层和会话层，可以用在TCP/IP协议之上，SMB使用TCP139端口和TCP445端口。
+        <h6 id="初始化"   >
+          <a href="#初始化" class="heading-link"><i class="fas fa-link"></i></a>初始化</h6>
+      第一次使用msf的时候，都需要进行一个初始化的过程<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylmFg.png" width="80%" height="80%"></div>
+
+</li>
+</ul>
+
+        <h6 id="开启msf"   >
+          <a href="#开启msf" class="heading-link"><i class="fas fa-link"></i></a>开启msf</h6>
+      <pre><code>msfconsole</code></pre>
+<p>（开启成功界面入下）</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylMSs.png" width="80%" height="80%"></div>
+
+
+        <h6 id="漏洞扫描"   >
+          <a href="#漏洞扫描" class="heading-link"><i class="fas fa-link"></i></a>漏洞扫描</h6>
+      <div align=center><img src="https://ftp.bmp.ovh/imgs/2021/01/939bf153a38c46f2.png" width="80%" height="80%"></div>
+
+
+        <h6 id="利用漏洞"   >
+          <a href="#利用漏洞" class="heading-link"><i class="fas fa-link"></i></a>利用漏洞</h6>
+      <ul>
+<li><p>在msf搜索改漏洞ms17-010</p>
+<p>  search ms17-010</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylnYQ.png" width="80%" height="80%"></div>
+</li>
+<li><p>加载攻击模块</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylZTS.png" width="80%" height="80%"></div>
+</li>
+<li><p>查看配置相关信息<br>查看哪些配置还没有配置</p>
+<pre><code>  show options
+  show target</code></pre>
+</li>
+</ul>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syluWj.png" width="80%" height="80%"></div>
+
+<ul>
+<li><p>检查版本，选择要应该使用的该版本的</p>
+<pre><code>  set target </code></pre>
+</li>
+</ul>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylQln.png" width="80%" height="80%"></div>
+
+
+        <h6 id="攻击"   >
+          <a href="#攻击" class="heading-link"><i class="fas fa-link"></i></a>攻击</h6>
+      <pre><code>run/exploit</code></pre>
+<p>进入成功之后就是这样的。</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syl1O0.png" width="80%" height="80%"></div>
+失败的话会提示这个（最下面一行）
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sy1enx.png" width="80%" height="80%"></div>
+可以输入
+
+<pre><code>help</code></pre>
+<p>查看有哪些功能（功能有很多，都可以试一下，还有很多脚本）也可以shell，进入到目标机的命令行，然后进行提权<br>（以后写一个提权的）</p>
+<p>下面是利用截取的目标机的实时屏幕</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syl8mV.png" width="80%" height="80%"></div>
+
+<p>这只是一次很小很小的利用漏洞的过程，而且内容有限，很多的过程都不规范，而且还是建立在局域网内，防火墙关闭的情况…..所以后面得学习其它的内容</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>2020总结</title>
+    <url>/2021/01/02/2020Summary/</url>
+    <content><![CDATA[<p>一些关于本人的2020总结，内容实属惨不忍睹，所以建议不读….</p>
+<a id="more"></a>
+
+        <h6 id="2021-1-14-21-40"   >
+          <a href="#2021-1-14-21-40" class="heading-link"><i class="fas fa-link"></i></a>2021.1.14 /21:40</h6>
+      
+        <h6 id="2020-1-8月"   >
+          <a href="#2020-1-8月" class="heading-link"><i class="fas fa-link"></i></a>2020 1-8月</h6>
+      <p>上半年在家里面，可以说是什么也没有学习，什么也没有做。有的时候突然想起那段记忆都是空白的。不知道自己每天都做了些什么。<br>一月二月在家里可能就是每天都在玩吧。至少在我仅有的记忆里面，那段记忆里面自己就是天天在家无所事事。<br>三月四月的时候。脑子里面每天都想着开学和减肥。稍稍成功一点的就是在三四月的时候减肥成功了（<del>10斤</del>），当时也不知道哪里来的毅力成功了。虽然现在已经回弹了，但是至少在当时成功了。就还是很开心的。<br>五六月的时候记不太清楚了。依旧是没天盼着开学，每天盼着能回到学校，自己的内心也是知道自己在家里面很颓。所以很想回到学校，想回去学习。那个时候开始学习了一点HTML和CSS，到现在还在用。陆陆续续，慢慢的学了很久。虽然视频也不多。最开始学个导航栏都写了一个晚上。有的时候真的觉得自己还是太笨了。<br>七八月份……更不知道自己在干嘛了…..</p>
+<p>可能上半年来最大的收获就是学了HTML和CSS吧…….说起来我都不好意思，两个那么简单的东西，自己花了大半年……</p>
+
+        <h6 id="2020-9-12月"   >
+          <a href="#2020-9-12月" class="heading-link"><i class="fas fa-link"></i></a>2020 9-12月</h6>
+      <p>下半年回到学校之后，先是搬了校区。开始了大二上的学习任务。大二真的很忙很忙很忙……,莫名其妙自己就变成了大二老学姐了……九十月份自己慢慢适应了大二的学习节奏，期间把css复习了一遍，当时还是想走前端的，安安心心做一个前端。如果说是什么改变可我的想法，其实我自己也说不清楚，就像现在我自己也还是觉得自己更加适合做前端，但是自己已经在学习网安了，就好好学网安吧！<br>下半年一个偶然的机会进入了信息安全兴趣班，当时本着想找个位置安安静静的学习（我要是知道我后面可以进计协的话我一定再等等…..）后面有着大二大三的学长，在兴趣班给我们入门网安，好像又开始慢慢接触网安了。到现在自己其实也不是很能确定自己是不是适合这个专业。<br>整个方向真的需要自己好多好多的知识，而我总是无法把这些知识穿在一起，有的时候就学起来真的很困难……<br>在兴趣班好好学习，后面选进了505的网安实验室。有黄洪老师带着学习。虽然我实在没有感受到有老师带着的好处…….<br>十月份的是时候和睿宝和超鹏一起参加了国信安。可能学的HTML和CSS终于有点了用处。自己亲手做了一个静态的的页面。有些内容只有自己做了之后才算是真的自己学会了。国信安的项目最后也是提交了。对于我自己来说，我还是很满意的。</p>
+<p>下半年的学习就是，参加了国信安的项目。学习了有关网络安全的一些知识…..mysql增删改查….Java基础？十大漏洞简介？…… </p>
+
+        <h6 id="2021-1-2-15：00"   >
+          <a href="#2021-1-2-15：00" class="heading-link"><i class="fas fa-link"></i></a>2021.1.2 /15：00</h6>
+      <p>等下个星期考试结束之后。好好写一篇有关于的2020的总结。<br>并且认真规划好2021的计划。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Python学习笔记</title>
     <url>/2021/03/10/python/</url>
-    <content><![CDATA[<a id="more"></a> 
+    <content><![CDATA[<p>一些关于python 的笔记</p>
+<a id="more"></a> 
 
         <h1 id="面向对象"   >
           <a href="#面向对象" class="heading-link"><i class="fas fa-link"></i></a>面向对象</h1>
@@ -113,149 +258,5 @@
 </li>
 </ul>
 ]]></content>
-  </entry>
-  <entry>
-    <title>第一次使用MSF，永恒之蓝漏洞 进入Windows 7的过程</title>
-    <url>/2021/01/18/fistUse%20MSF/</url>
-    <content><![CDATA[<p>还是很激动的一个过程，大佬绕过….此处记录一下一个小菜鸡第一次用MSF的过程，有些激动</p>
-<a id="more"></a> 
-
-        <h3 id="前言"   >
-          <a href="#前言" class="heading-link"><i class="fas fa-link"></i></a>前言</h3>
-      <p> 本案例讲的是用利用永恒之蓝漏洞攻击Windows 7的一个过程</p>
-<ul>
-<li>永恒之蓝（Eternal Blue）<br>爆发于2017年4月14日晚，是一种利用Windows系统的<b>SMB协议</b>漏洞来获取系统的最高权限，以此来控制被入侵的计算机。甚至于2017年5月12日， 不法分子通过改造“永恒之蓝”制作了wannacry勒索病毒，使全世界大范围内遭受了该勒索病毒</li>
-<li>SMB<br>（全称是Server Message Block）是一个协议服务器信息块，它是一种客户机/服务器、请求/响应协议，通过SMB协议可以在计算机间共享文件、打印机、命名管道等资源，电脑上的网上邻居就是靠SMB实现的；SMB协议工作在应用层和会话层，可以用在TCP/IP协议之上，SMB使用TCP139端口和TCP445端口。
-        <h6 id="初始化"   >
-          <a href="#初始化" class="heading-link"><i class="fas fa-link"></i></a>初始化</h6>
-      第一次使用msf的时候，都需要进行一个初始化的过程<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylmFg.png" width="80%" height="80%"></div>
-
-</li>
-</ul>
-
-        <h6 id="开启msf"   >
-          <a href="#开启msf" class="heading-link"><i class="fas fa-link"></i></a>开启msf</h6>
-      <pre><code>msfconsole</code></pre>
-<p>（开启成功界面入下）</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylMSs.png" width="80%" height="80%"></div>
-
-
-        <h6 id="漏洞扫描"   >
-          <a href="#漏洞扫描" class="heading-link"><i class="fas fa-link"></i></a>漏洞扫描</h6>
-      <div align=center><img src="https://ftp.bmp.ovh/imgs/2021/01/939bf153a38c46f2.png" width="80%" height="80%"></div>
-
-
-        <h6 id="利用漏洞"   >
-          <a href="#利用漏洞" class="heading-link"><i class="fas fa-link"></i></a>利用漏洞</h6>
-      <ul>
-<li><p>在msf搜索改漏洞ms17-010</p>
-<p>  search ms17-010</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylnYQ.png" width="80%" height="80%"></div>
-</li>
-<li><p>加载攻击模块</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylZTS.png" width="80%" height="80%"></div>
-</li>
-<li><p>查看配置相关信息<br>查看哪些配置还没有配置</p>
-<pre><code>  show options
-  show target</code></pre>
-</li>
-</ul>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/syluWj.png" width="80%" height="80%"></div>
-
-<ul>
-<li><p>检查版本，选择要应该使用的该版本的</p>
-<pre><code>  set target </code></pre>
-</li>
-</ul>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylQln.png" width="80%" height="80%"></div>
-
-
-        <h6 id="攻击"   >
-          <a href="#攻击" class="heading-link"><i class="fas fa-link"></i></a>攻击</h6>
-      <pre><code>run/exploit</code></pre>
-<p>进入成功之后就是这样的。</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/syl1O0.png" width="80%" height="80%"></div>
-失败的话会提示这个（最下面一行）
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/sy1enx.png" width="80%" height="80%"></div>
-可以输入
-
-<pre><code>help</code></pre>
-<p>查看有哪些功能（功能有很多，都可以试一下，还有很多脚本）也可以shell，进入到目标机的命令行，然后进行提权<br>（以后写一个提权的）</p>
-<p>下面是利用截取的目标机的实时屏幕</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/syl8mV.png" width="80%" height="80%"></div>
-
-<p>这只是一次很小很小的利用漏洞的过程，而且内容有限，很多的过程都不规范，而且还是建立在局域网内，防火墙关闭的情况…..所以后面得学习其它的内容</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>记一次kali的Nessus的安装</title>
-    <url>/2021/01/17/firstScans/</url>
-    <content><![CDATA[<p>由于学习中要用到Nessus，今天在安装的过程中遇到了几个问题，记录一下。</p>
-<a id="more"></a>
-
-        <h4 id="安装过程"   >
-          <a href="#安装过程" class="heading-link"><i class="fas fa-link"></i></a>安装过程</h4>
-      <p>Nessus安装的教程在网上有很多。前面步骤都是一样的。在网上下载好两个压缩包，拖到kali 里面去</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/17/syKgYj.png" width="80%" height="80%"></div>
-
-
-        <h4 id="问题"   >
-          <a href="#问题" class="heading-link"><i class="fas fa-link"></i></a>问题</h4>
-      
-        <h5 id="1-进入Nessus之后没有Scans页面，只有Setting"   >
-          <a href="#1-进入Nessus之后没有Scans页面，只有Setting" class="heading-link"><i class="fas fa-link"></i></a>1.进入Nessus之后没有Scans页面，只有Setting</h5>
-      <p>这个问题是因为之前在网上找教程安装的时候，很多教程显示在初始化选择版本选的是第四个。</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/syMrg1.png" width="50%" height="50%"></div>
-但其实在选择第四个的时候选的是管理版本。进入界面之后就没有Scans页面。
-
-<p>解决方法也很简单<br>1.页面更新加载进入https：//localhost：8834<br>2.在setting页面选择如下</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/syMx8s.png" width="80%" height="80%"></div>
-点击小笔之后输入之前发在邮箱里面的激活码，然后页面会跳到加载进度条那页，后面进去之后就好了
-
-
-        <h5 id="2-更新进度条回滚，无法加载出来"   >
-          <a href="#2-更新进度条回滚，无法加载出来" class="heading-link"><i class="fas fa-link"></i></a>2.更新进度条回滚，无法加载出来</h5>
-      <div align=center><img src="https://s3.ax1x.com/2021/01/18/syMz2n.png" width="80%" height="80%"></div>
-说真的，这个问题今天难倒了班上一半的同学，具体原因是什么不是很知道，网上说法也不一致。
-
-
-<p><strong>解决方法</strong><br>重装。简单粗暴，我是把kali直接移除了重装的。但是我觉得可能是我之前由于版本选错了的原因，一个restart了好几次…..卡死了？<br>由于我在装的时候，网上的办法我都试过了，如果你试过了有用，那就当我没说！但是如果还没打算尝试！建议直接卸载重装……</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>2020总结</title>
-    <url>/2021/01/02/2020Summary/</url>
-    <content><![CDATA[<p>一些关于本人的2020总结，内容实属惨不忍睹，所以建议不读….</p>
-<a id="more"></a>
-
-        <h6 id="2021-1-14-21-40"   >
-          <a href="#2021-1-14-21-40" class="heading-link"><i class="fas fa-link"></i></a>2021.1.14 /21:40</h6>
-      
-        <h6 id="2020-1-8月"   >
-          <a href="#2020-1-8月" class="heading-link"><i class="fas fa-link"></i></a>2020 1-8月</h6>
-      <p>上半年在家里面，可以说是什么也没有学习，什么也没有做。有的时候突然想起那段记忆都是空白的。不知道自己每天都做了些什么。<br>一月二月在家里可能就是每天都在玩吧。至少在我仅有的记忆里面，那段记忆里面自己就是天天在家无所事事。<br>三月四月的时候。脑子里面每天都想着开学和减肥。稍稍成功一点的就是在三四月的时候减肥成功了（<del>10斤</del>），当时也不知道哪里来的毅力成功了。虽然现在已经回弹了，但是至少在当时成功了。就还是很开心的。<br>五六月的时候记不太清楚了。依旧是没天盼着开学，每天盼着能回到学校，自己的内心也是知道自己在家里面很颓。所以很想回到学校，想回去学习。那个时候开始学习了一点HTML和CSS，到现在还在用。陆陆续续，慢慢的学了很久。虽然视频也不多。最开始学个导航栏都写了一个晚上。有的时候真的觉得自己还是太笨了。<br>七八月份……更不知道自己在干嘛了…..</p>
-<p>可能上半年来最大的收获就是学了HTML和CSS吧…….说起来我都不好意思，两个那么简单的东西，自己花了大半年……</p>
-
-        <h6 id="2020-9-12月"   >
-          <a href="#2020-9-12月" class="heading-link"><i class="fas fa-link"></i></a>2020 9-12月</h6>
-      <p>下半年回到学校之后，先是搬了校区。开始了大二上的学习任务。大二真的很忙很忙很忙……,莫名其妙自己就变成了大二老学姐了……九十月份自己慢慢适应了大二的学习节奏，期间把css复习了一遍，当时还是想走前端的，安安心心做一个前端。如果说是什么改变可我的想法，其实我自己也说不清楚，就像现在我自己也还是觉得自己更加适合做前端，但是自己已经在学习网安了，就好好学网安吧！<br>下半年一个偶然的机会进入了信息安全兴趣班，当时本着想找个位置安安静静的学习（我要是知道我后面可以进计协的话我一定再等等…..）后面有着大二大三的学长，在兴趣班给我们入门网安，好像又开始慢慢接触网安了。到现在自己其实也不是很能确定自己是不是适合这个专业。<br>整个方向真的需要自己好多好多的知识，而我总是无法把这些知识穿在一起，有的时候就学起来真的很困难……<br>在兴趣班好好学习，后面选进了505的网安实验室。有黄洪老师带着学习。虽然我实在没有感受到有老师带着的好处…….<br>十月份的是时候和睿宝和超鹏一起参加了国信安。可能学的HTML和CSS终于有点了用处。自己亲手做了一个静态的的页面。有些内容只有自己做了之后才算是真的自己学会了。国信安的项目最后也是提交了。对于我自己来说，我还是很满意的。</p>
-<p>下半年的学习就是，参加了国信安的项目。学习了有关网络安全的一些知识…..mysql增删改查….Java基础？十大漏洞简介？…… </p>
-
-        <h6 id="2021-1-2-15：00"   >
-          <a href="#2021-1-2-15：00" class="heading-link"><i class="fas fa-link"></i></a>2021.1.2 /15：00</h6>
-      <p>等下个星期考试结束之后。好好写一篇有关于的2020的总结。<br>并且认真规划好2021的计划。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>我的第一篇博客</title>
-    <url>/2020/12/28/Fist/</url>
-    <content><![CDATA[<p>踩踩雷，各种报错之后，也是搭建好了这个完整的blog<br>（至少目前来看对于我来时说完整的…..以后有问题以后再说吧)</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>Fist Blog</tag>
-      </tags>
   </entry>
 </search>
