@@ -1,0 +1,303 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/favicon.ico.png?v=2.4.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/favicon.ico.png?v=2.4.0" type="image/png" sizes="32x32"><meta name="description" content="面向对象                           封装                           内置函数 dir       1dir 变量名 查看所有的方法（内置方法、属性）                      定义类       123class 类名    def 方法名（self）        pass">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python学习笔记">
+<meta property="og:url" content="http://example.com/2021/03/10/python/index.html">
+<meta property="og:site_name" content="Cloudy">
+<meta property="og:description" content="面向对象                           封装                           内置函数 dir       1dir 变量名 查看所有的方法（内置方法、属性）                      定义类       123class 类名    def 方法名（self）        pass">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-10T10:43:07.733Z">
+<meta property="article:modified_time" content="2021-03-10T11:48:29.075Z">
+<meta property="article:author" content="Cloudy-kk">
+<meta name="twitter:card" content="summary"><title>Python学习笔记 | Cloudy</title><link ref="canonical" href="http://example.com/2021/03/10/python/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.4.0"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"carbon","highlight":"light","wordWrap":true},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: {"switchPost":true},
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="Cloudy" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/about/"><span class="header-nav-menu-item__icon"><i class="fas fa-fingerprint"></i></span><span class="header-nav-menu-item__text">关于</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/friends/"><span class="header-nav-menu-item__icon"><i class="fas fa-greater-than"></i></span><span class="header-nav-menu-item__text">大佬</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Cloudy</div><div class="header-banner-info__subtitle"></div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Python学习笔记</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2021-03-10</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2021-03-10</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">644</span></span></div></header><div class="post-body">
+        <h1 id="面向对象"   >
+          <a href="#面向对象" class="heading-link"><i class="fas fa-link"></i></a>面向对象</h1>
+      
+        <h2 id="封装"   >
+          <a href="#封装" class="heading-link"><i class="fas fa-link"></i></a>封装</h2>
+      
+        <h3 id="内置函数-dir"   >
+          <a href="#内置函数-dir" class="heading-link"><i class="fas fa-link"></i></a>内置函数 dir</h3>
+      <figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dir</span> 变量名</span><br></pre></td></tr></table></div></figure>
+<p>查看所有的方法（内置方法、属性）</p>
+<hr>
+
+        <h3 id="定义类"   >
+          <a href="#定义类" class="heading-link"><i class="fas fa-link"></i></a>定义类</h3>
+      <figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 类名</span></span><br><span class="line"><span class="class">    <span class="title">def</span> 方法名（<span class="title">self</span>）</span></span><br><span class="line"><span class="class">        <span class="title">pass</span></span></span><br></pre></td></tr></table></div></figure>
+<hr>
+
+        <h3 id="创建对象"   >
+          <a href="#创建对象" class="heading-link"><i class="fas fa-link"></i></a>创建对象</h3>
+      <figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对象变量.name = 类名（）</span><br></pre></td></tr></table></div></figure>
+<hr>
+
+        <h3 id="创建变量"   >
+          <a href="#创建变量" class="heading-link"><i class="fas fa-link"></i></a>创建变量</h3>
+      <p>初始化实例</p>
+<pre><code>变量名=类名（）</code></pre>
+<hr>
+
+        <h3 id="初始化方法"   >
+          <a href="#初始化方法" class="heading-link"><i class="fas fa-link"></i></a>初始化方法</h3>
+      
+        <h5 id="当创建一个对象的时候："   >
+          <a href="#当创建一个对象的时候：" class="heading-link"><i class="fas fa-link"></i></a>当创建一个对象的时候：</h5>
+      <p>1.分配空间</p>
+<p>2.初始化方法（为属性设置初始值）</p>
+<ul>
+<li><p>__init__方法：专门定义一个类指定这个类中包含哪些属性</p>
+<p>  <code>self.属性名 = 属性的初始值</code> </p>
+</li>
+</ul>
+<ul>
+<li>在方法内部使用 <code>self.属性 = 形参</code> 接收外部传递的参数</li>
+</ul>
+<p>在创建对象的时候，使用<code>类名（属性1，属性2…）</code>调用</p>
+<p><b>__del__方法</b>：对象在被销毁前，还可以做的事情<br><b>__str___方法</b>：必须返回一个字符串</p>
+<hr>
+
+        <h1 id="继承"   >
+          <a href="#继承" class="heading-link"><i class="fas fa-link"></i></a>继承</h1>
+      <p>单继承/多继承</p>
+
+        <h5 id="单继承"   >
+          <a href="#单继承" class="heading-link"><i class="fas fa-link"></i></a>单继承</h5>
+      <pre><code>class B(A)</code></pre>
+
+        <h5 id="多继承"   >
+          <a href="#多继承" class="heading-link"><i class="fas fa-link"></i></a>多继承</h5>
+      <pre><code>class C(A,B)</code></pre>
+<p>如果多继承的当中的父类中方法的名字重了。按照继承的顺序来</p>
+
+        <h6 id="MRO方法–方法搜索顺序"   >
+          <a href="#MRO方法–方法搜索顺序" class="heading-link"><i class="fas fa-link"></i></a>MRO方法–方法搜索顺序</h6>
+      
+        <h3 id="子类的方法"   >
+          <a href="#子类的方法" class="heading-link"><i class="fas fa-link"></i></a>子类的方法</h3>
+      <p>创建子类的时候，父类必须包含在当前问价中。且位于子类前面</p>
+<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ElectricCar</span>(<span class="params">Car</span>)</span></span><br><span class="line"><span class="class">    <span class="title">def</span> <span class="title">__init__</span>(<span class="params">self,make,model,year</span>)</span></span><br><span class="line"><span class="class">        # 初始化父类的属性</span></span><br><span class="line"><span class="class">        <span class="title">super</span>().<span class="title">__init__</span>(<span class="params">self,make,model,year</span>)</span></span><br><span class="line"><span class="class"></span></span><br></pre></td></tr></table></div></figure>
+
+
+
+        <h3 id="方法重写"   >
+          <a href="#方法重写" class="heading-link"><i class="fas fa-link"></i></a>方法重写</h3>
+      
+        <h4 id="方法重写。-覆盖方法"   >
+          <a href="#方法重写。-覆盖方法" class="heading-link"><i class="fas fa-link"></i></a>方法重写。(覆盖方法)</h4>
+      <p>在子类中定义一个同名的方法就可以了</p>
+
+        <h3 id="方法重写（拓展父类方法）"   >
+          <a href="#方法重写（拓展父类方法）" class="heading-link"><i class="fas fa-link"></i></a>方法重写（拓展父类方法）</h3>
+      <p>原本封装的方法不能满足子类。重写之后又在父类的基础上拓展</p>
+<ul>
+<li><p>重写方法</p>
+</li>
+<li><p>利用super调用父类的方法</p>
+</li>
+<li><p>添加内容</p>
+<figure class="highlight python"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Run</span>(<span class="params">self</span>)</span></span><br><span class="line"><span class="function">    <span class="title">print</span>(<span class="params"><span class="string">&quot;小鸟会飞&quot;</span></span>)  #</span></span><br><span class="line"><span class="function">    <span class="title">super</span>().<span class="title">fly</span>()   #使用<span class="title">super</span> ，调用原来在父类中封装的方法</span></span><br><span class="line"><span class="function">    <span class="title">print</span>(<span class="params"><span class="string">&quot;$%$^#%#$^$^&quot;</span></span>) #添加其他的代码</span></span><br></pre></td></tr></table></div></figure>
+
+        <h3 id="私有属性，私有方法"   >
+          <a href="#私有属性，私有方法" class="heading-link"><i class="fas fa-link"></i></a>私有属性，私有方法</h3>
+      </li>
+<li><p>在属性名或者方法前增加 <code>两个下划线 __ </code> 定义的就是私有属性</p>
+</li>
+<li><p>私有属性在外界不能被直接访问。只能在类中自己使用</p>
+</li>
+<li><p>python是没有真正的私有, python解释器在处理私有属性，实际上是对名称做了一些特殊的 处理，使得外界无法访问到</p>
+</li>
+<li><p>*在外界访问**：<code>_类名__私有变量名</code></p>
+</li>
+<li><p><strong>子类对象 不能在 自己的方法内部，直接访问父类的 私有属性或者私有方法</strong></p>
+</li>
+<li><p><strong>子类对象可以通过父类访问 父类的公有方法 从而间接访问到私有方法和私有属性</strong><br>通过父类的公有方法 在公有方法中间接访问私有方法和私有属性</p>
+</li>
+</ul>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2021/01/18/fistUse%20MSF/"><span class="paginator-prev__text">第一次使用MSF，永恒之蓝漏洞 进入Windows 7的过程</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div><div class="comments" id="comments"><div id="valine-container"></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.</span> <span class="toc-text">
+          面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">
+          封装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0-dir"><span class="toc-number">1.1.1.</span> <span class="toc-text">
+          内置函数 dir</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E7%B1%BB"><span class="toc-number">1.1.2.</span> <span class="toc-text">
+          定义类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.1.3.</span> <span class="toc-text">
+          创建对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%8F%98%E9%87%8F"><span class="toc-number">1.1.4.</span> <span class="toc-text">
+          创建变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.5.</span> <span class="toc-text">
+          初始化方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BD%93%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%9A"><span class="toc-number">1.1.5.0.1.</span> <span class="toc-text">
+          当创建一个对象的时候：</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">2.</span> <span class="toc-text">
+          继承</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8D%95%E7%BB%A7%E6%89%BF"><span class="toc-number">2.0.0.0.1.</span> <span class="toc-text">
+          单继承</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%9A%E7%BB%A7%E6%89%BF"><span class="toc-number">2.0.0.0.2.</span> <span class="toc-text">
+          多继承</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#MRO%E6%96%B9%E6%B3%95%E2%80%93%E6%96%B9%E6%B3%95%E6%90%9C%E7%B4%A2%E9%A1%BA%E5%BA%8F"><span class="toc-number">2.0.0.0.2.1.</span> <span class="toc-text">
+          MRO方法–方法搜索顺序</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E7%B1%BB%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">2.0.1.</span> <span class="toc-text">
+          子类的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99"><span class="toc-number">2.0.2.</span> <span class="toc-text">
+          方法重写</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99%E3%80%82-%E8%A6%86%E7%9B%96%E6%96%B9%E6%B3%95"><span class="toc-number">2.0.2.1.</span> <span class="toc-text">
+          方法重写。(覆盖方法)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99%EF%BC%88%E6%8B%93%E5%B1%95%E7%88%B6%E7%B1%BB%E6%96%B9%E6%B3%95%EF%BC%89"><span class="toc-number">2.0.3.</span> <span class="toc-text">
+          方法重写（拓展父类方法）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%81%E6%9C%89%E5%B1%9E%E6%80%A7%EF%BC%8C%E7%A7%81%E6%9C%89%E6%96%B9%E6%B3%95"><span class="toc-number">2.0.4.</span> <span class="toc-text">
+          私有属性，私有方法</span></a></li></ol></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/ys.png" alt="avatar"></div><p class="sidebar-ov-author__text">好好学习，天天脱发</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="Chess_Milk" target="_blank" rel="noopener" data-popover="微信" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-weixin"></i></span></a><a class="sidebar-ov-social-item" href="3123460137" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">分类</div></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Cloudy-kk</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.4.0</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1.0.1/dist/canvas-nest.min.js" color="0,0,0" opacity="0.6" count="99" zIndex="-1"></script><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script><script>function loadValine () {
+  var GUEST_INFO = ['nick', 'mail', 'link'];
+  var guest_info = 'nick,mail,link';
+
+  guest_info = guest_info.split(',').filter(function(item) {
+    return GUEST_INFO.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#valine-container',
+    appId: 'NqJWd28fvAOruhl3OAt7CKEb-gzGzoHsz',
+    appKey: 'm42HbvSYj5A81ARvWaRiYqDV',
+    notify: true,
+    verify: true,
+    placeholder: 'Just go go',
+    avatar: 'mp',
+    meta: guest_info,
+    pageSize: '10' || 10,
+    visitor: false,
+    recordIP: false,
+    lang: '' || 'zh-cn',
+    path: window.location.pathname
+  });
+}
+
+if (false) {
+  loadValine();
+} else {
+  window.addEventListener('DOMContentLoaded', loadValine, false);
+}</script><script src="/js/utils.js?v=2.4.0"></script><script src="/js/stun-boot.js?v=2.4.0"></script><script src="/js/scroll.js?v=2.4.0"></script><script src="/js/header.js?v=2.4.0"></script><script src="/js/sidebar.js?v=2.4.0"></script></body></html>
