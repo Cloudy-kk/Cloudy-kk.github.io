@@ -1,147 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>我的第一篇博客</title>
-    <url>/2020/12/28/Fist/</url>
-    <content><![CDATA[<p>踩踩雷，各种报错之后，也是搭建好了这个完整的blog<br>（至少目前来看对于我来时说完整的…..以后有问题以后再说吧)</p>
-]]></content>
-      <categories>
-        <category>Life</category>
-      </categories>
-      <tags>
-        <tag>Fist Blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记一次kali的Nessus的安装</title>
-    <url>/2021/01/17/firstScans/</url>
-    <content><![CDATA[<p>由于学习中要用到Nessus，今天在安装的过程中遇到了几个问题，记录一下。</p>
+    <title>JavaScirpt笔记</title>
+    <url>/2021/03/18/JavaScript/</url>
+    <content><![CDATA[<p>学习js中的笔记</p>
 <a id="more"></a>
 
-        <h4 id="安装过程"   >
-          <a href="#安装过程" class="heading-link"><i class="fas fa-link"></i></a>安装过程</h4>
-      <p>Nessus安装的教程在网上有很多。前面步骤都是一样的。在网上下载好两个压缩包，拖到kali 里面去</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/17/syKgYj.png" width="80%" height="80%"></div>
+        <h2 id="JavaScript介绍"   >
+          <a href="#JavaScript介绍" class="heading-link"><i class="fas fa-link"></i></a>JavaScript介绍</h2>
+      <p>ECMAScript(ES):js的标准，这标准需要由各个厂商去实现（不同浏览器对该标准有不同的实现）<br>Chrome V8 最快<br>完整的 JavaScript 实现包含以下几个部分（见图 1-1）：</p>
+<blockquote>
+<p>核心（ECMAScript）<br>文档对象模型（DOM）<br>浏览器对象模型（BOM）</p>
+</blockquote>
+<hr>
 
+        <h2 id="语言基础"   >
+          <a href="#语言基础" class="heading-link"><i class="fas fa-link"></i></a>语言基础</h2>
+      <p>区分大小写<br>第一个字符必须是一个字母、下划线（_）或美元符号（$）；<br>剩下的其他字符可以是字母、下划线、美元符号或数字。</p>
+<p>字面量：常量，不可改变的值</p>
 
-        <h4 id="问题"   >
-          <a href="#问题" class="heading-link"><i class="fas fa-link"></i></a>问题</h4>
+        <h3 id="全局作用域"   >
+          <a href="#全局作用域" class="heading-link"><i class="fas fa-link"></i></a>全局作用域</h3>
+      <blockquote>
+<p>1.全局作用域在页面打开的时候创建，在页面关闭的时候销毁<br>2.在全局作用域中有个全局对象window<br>3.在全局作用域中：<br>创建的变量会作为window对象的属性保存<br>创建的函数会作为window对象的方法保存</p>
+</blockquote>
+
+        <h3 id="函数作用域"   >
+          <a href="#函数作用域" class="heading-link"><i class="fas fa-link"></i></a>函数作用域</h3>
+      <blockquote>
+<p>调用函数的时候船舰的作用域，函数执行完毕之后，函数作用域销毁<br>每调用一个函数就创建一个作用域，他们之间相互独立<br>在函数作用域中可以访问到全局作用域的变量（反过来不可）<br>当在函数作用域中操作一个变量，会先在自身作用域中寻找（就近原则），如果没有，就向<strong>上一级</strong>寻找<br>在函数中访问全局变量，可以使用<code>window.变量</code><br>在函数作用域中也有声明提升的特性。在函数中所有代码执行之前创建</p>
+</blockquote>
+
+        <h3 id="var关键字"   >
+          <a href="#var关键字" class="heading-link"><i class="fas fa-link"></i></a>var关键字</h3>
+      <p><code>var 变量名</code><br>不初始化的情况下，变量会保存一个特殊值 undefined</p>
+
+        <h4 id="var-声明作用域"   >
+          <a href="#var-声明作用域" class="heading-link"><i class="fas fa-link"></i></a>var 声明作用域</h4>
+      <p>关键的问题在于，使用<strong>var 操作符定义的变量会成为包含它的函数的局部变量。</strong><br>比如，使用 var在一个函数内部定义一个变量，就意味着该变量将在函数退出时被销毁：</p>
+
+        <h4 id="var-声明提升"   >
+          <a href="#var-声明提升" class="heading-link"><i class="fas fa-link"></i></a>var 声明提升</h4>
+      <p>使用var声明的变量，<strong>会在所有代码执行之前被声明，但是不会赋值。</strong></p>
+<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line"> <span class="built_in">console</span>.log(age); </span><br><span class="line"> <span class="keyword">var</span> age = <span class="number">26</span>; </span><br><span class="line">&#125; </span><br><span class="line">foo(); <span class="comment">// undefined </span></span><br></pre></td></tr></table></div></figure>
+<p>之所以不会报错，是因为 ECMAScript 运行时把它看成等价于如下代码：</p>
+<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line"> <span class="keyword">var</span> age; </span><br><span class="line"> <span class="built_in">console</span>.log(age); </span><br><span class="line"> age = <span class="number">26</span>; </span><br><span class="line">&#125; </span><br><span class="line">foo(); <span class="comment">// undefined </span></span><br></pre></td></tr></table></div></figure>
+<p>这就是所谓的“提升”（hoist），也就是把所有变量声明都拉到函数作用域的顶部。此外，反复多次<br>使用 var 声明同一个变量也没有问题：</p>
+<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line"> <span class="keyword">var</span> age = <span class="number">16</span>; </span><br><span class="line"> <span class="keyword">var</span> age = <span class="number">26</span>; </span><br><span class="line"> <span class="keyword">var</span> age = <span class="number">36</span>; </span><br><span class="line"> <span class="built_in">console</span>.log(age); </span><br><span class="line">&#125; </span><br><span class="line">foo(); <span class="comment">// 36 </span></span><br></pre></td></tr></table></div></figure>
+
+        <h3 id="function提升"   >
+          <a href="#function提升" class="heading-link"><i class="fas fa-link"></i></a>function提升</h3>
+      <p>1.<strong>使用函数声明形式创建的函数<br><code>function 函数()&#123;&#125;</code>，它会在所有代码执行之前就被创建</strong><br>2.使用函数表达式创建的函数，不会被提前创建。</p>
+
+        <h3 id="let-声明"   >
+          <a href="#let-声明" class="heading-link"><i class="fas fa-link"></i></a>let 声明</h3>
+      <p>let 跟 var 的作用差不多，但有着非常重要的区别。最明显的区别是，let 声明的范围是块作用域，而 var 声明的范围是函数作用域。<strong>块作用域是函数作用域的子集，因此适用于 var 的作用域限制同样也适用于 let。</strong></p>
+
+        <h4 id="let-声明的变量不会在作用域中被提升"   >
+          <a href="#let-声明的变量不会在作用域中被提升" class="heading-link"><i class="fas fa-link"></i></a>let 声明的变量不会在作用域中被提升</h4>
+      <figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="comment">// age 不会被提升</span></span><br><span class="line"><span class="built_in">console</span>.log(age); <span class="comment">// ReferenceError：age 没有定义</span></span><br><span class="line"><span class="keyword">let</span> age = <span class="number">26</span>; </span><br></pre></td></tr></table></div></figure>
+<p>在解析代码时，JavaScript 引擎也会注意出现在块后面的 let 声明，只不过在此之前不能以任何方式来引用未声明的变量。在 let 声明之前的执行瞬间被称为“暂时性死区”（temporal dead zone），在此阶段引用任何后面才声明的变量都会抛出ReferenceError。</p>
+
+        <h4 id="全局声明"   >
+          <a href="#全局声明" class="heading-link"><i class="fas fa-link"></i></a>全局声明</h4>
+      <p>与 var 关键字不同，使用 let 在全局作用域中声明的变量不会成为 window 对象的属性（var 声明的变量则会）。</p>
+
+        <h3 id="数据类型"   >
+          <a href="#数据类型" class="heading-link"><i class="fas fa-link"></i></a>数据类型</h3>
+      <p>ES有6钟简单数据类型<br>Undefined<br>Null<br>Boolean<br>Number<br>String<br>Symbol</p>
+
+        <h4 id="typeof操作符"   >
+          <a href="#typeof操作符" class="heading-link"><i class="fas fa-link"></i></a>typeof操作符</h4>
+      <p>使用typeof运算符来检测变量的数据类型<br>typeof的返回值</p>
+<p>typeof运算符的返回类型为字符串</p>
+
+        <h4 id="Undefined"   >
+          <a href="#Undefined" class="heading-link"><i class="fas fa-link"></i></a>Undefined</h4>
+      <p>Undifined只有一个字：undenfined<br>使用var和let没有进行初始化的时候就会赋值undefined</p>
+<p>对未声明的变量，只能执行一个有用的操作，就是对他调用typeof<br>返回结果为：undefined</p>
+
+        <h4 id="Null"   >
+          <a href="#Null" class="heading-link"><i class="fas fa-link"></i></a>Null</h4>
+      <p>Null 类型同样只有一个值，即特殊值 null。逻辑上讲，null 值表示一个<strong>空对象指针</strong>，这也是给typeof 传一个 null 会返回”object”的原因：</p>
+<p>定义将来要保存对象值的变量时，建议使用 null 来初始化，不要使用其他值</p>
+
+        <h4 id="Number"   >
+          <a href="#Number" class="heading-link"><i class="fas fa-link"></i></a>Number</h4>
+      <p>八进制 —-&gt; 0（前缀）<br>十六进制 —-&gt; 0x（前缀）</p>
+
+        <h5 id="浮点值"   >
+          <a href="#浮点值" class="heading-link"><i class="fas fa-link"></i></a>浮点值</h5>
+      <p>因为<strong>浮点值使用的内存空间是整数的两倍</strong>，所以在小数点后面没有数字（后面是.0）的情况下，数值都会变成整数。<br>非常大或者非常小的，用科学计数法表示—-&gt;例如：<code>3e-7</code></p>
+
+        <h5 id="NaN"   >
+          <a href="#NaN" class="heading-link"><i class="fas fa-link"></i></a>NaN</h5>
+      <p>NaN—-&gt; Not a Number<br>NaN 的操作始终返回 NaN（如 NaN/10）<br>isNaN()函数。该函数接收一个参数，可以是任意数据类型，然后判断<br>这个参数是否“不是数值”。把一个值传给 isNaN()后，<strong>该函数会尝试把它转换为数值</strong>。某些非数值的值可以直接转换成数值，如字符串”10”或布尔值<br><code>console.log(isNaN(&quot;blue&quot;)); // true，不可以转换为数值</code></p>
+
+        <h4 id="强制类型转换"   >
+          <a href="#强制类型转换" class="heading-link"><i class="fas fa-link"></i></a>强制类型转换</h4>
+      <p>非数值转换为数值：</p>
+<p><strong>Number()、parseInt()和 parseFloat()。</strong><br>Number()是转型函数，可用于任何数据类型。后两个函数主要用于将字符串转换为数值。<br><strong>**Number()</strong></p>
+<blockquote>
+<p>1.纯数字转化成数字<br>2.当字符串中含有非数字的内容的时候，转换成NaN<br>3.空字符串（全部是空格）—-&gt; 0<br>4.true—&gt; 1  false —&gt; 0<br>5.null—&gt;NaN undefined—&gt; NaN  </p>
+</blockquote>
+<p><strong>parseInt()、parseFloat()</strong></p>
+<blockquote>
+<p>1.parsInt()将字符串中有效的整数（小数）取出来，然后转化成Number<br>2.如果对非String使用，他会先将其转换成String</p>
+</blockquote>
+<p><strong>转化成字符串</strong><br>方法一：<strong>toString方法</strong><br>方法二：<strong>String()函数</strong></p>
+<p>区别：null和undefined没有toString方法，String()可以将null—&gt;”null”,undefined—&gt;”undefined”</p>
+<p><strong>Boolean转化</strong></p>
+<blockquote>
+<p>数字—&gt; 布尔 ：除了0和NaN,其余都是true<br>字符串—&gt; 布尔：除了空串，其余都是true<br>null和undefined都会转化成false<br>对象也会转化成true</p>
+</blockquote>
+<hr>
+
+        <h2 id="对象（引用数据类型）"   >
+          <a href="#对象（引用数据类型）" class="heading-link"><i class="fas fa-link"></i></a>对象（引用数据类型）</h2>
       
-        <h5 id="1-进入Nessus之后没有Scans页面，只有Setting"   >
-          <a href="#1-进入Nessus之后没有Scans页面，只有Setting" class="heading-link"><i class="fas fa-link"></i></a>1.进入Nessus之后没有Scans页面，只有Setting</h5>
-      <p>这个问题是因为之前在网上找教程安装的时候，很多教程显示在初始化选择版本选的是第四个。</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/syMrg1.png" width="50%" height="50%"></div>
-但其实在选择第四个的时候选的是管理版本。进入界面之后就没有Scans页面。
+        <h3 id="创建对象"   >
+          <a href="#创建对象" class="heading-link"><i class="fas fa-link"></i></a>创建对象</h3>
+      <figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br></pre></td></tr></table></div></figure>
 
-<p>解决方法也很简单<br>1.页面更新加载进入https：//localhost：8834<br>2.在setting页面选择如下</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/syMx8s.png" width="80%" height="80%"></div>
-点击小笔之后输入之前发在邮箱里面的激活码，然后页面会跳到加载进度条那页，后面进去之后就好了
+        <h3 id="添加属性"   >
+          <a href="#添加属性" class="heading-link"><i class="fas fa-link"></i></a>添加属性</h3>
+      <figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line">obj.name = <span class="string">&quot;孙悟空&quot;</span>;</span><br></pre></td></tr></table></div></figure>
 
+        <h3 id="读取属性"   >
+          <a href="#读取属性" class="heading-link"><i class="fas fa-link"></i></a>读取属性</h3>
+      <figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line">obj.name;</span><br></pre></td></tr></table></div></figure>
+<p>如果需要使用特殊的属性名(格式如下，读取的时候相同)<br>使用<code>[]</code>操作属性会更加灵活。可以在<code>[]</code>中传递一个变量，这样变量值是多少就会去读取那个属性、</p>
+<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line">obj[<span class="string">&quot;123&quot;</span>] = <span class="number">789</span>;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="keyword">var</span> n =<span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj[n]) = <span class="number">789</span>;</span><br></pre></td></tr></table></div></figure>
 
-        <h5 id="2-更新进度条回滚，无法加载出来"   >
-          <a href="#2-更新进度条回滚，无法加载出来" class="heading-link"><i class="fas fa-link"></i></a>2.更新进度条回滚，无法加载出来</h5>
-      <div align=center><img src="https://s3.ax1x.com/2021/01/18/syMz2n.png" width="80%" height="80%"></div>
-说真的，这个问题今天难倒了班上一半的同学，具体原因是什么不是很知道，网上说法也不一致。
+        <h3 id="in运算符"   >
+          <a href="#in运算符" class="heading-link"><i class="fas fa-link"></i></a>in运算符</h3>
+      <blockquote>
+<p>通过该运算符可以检查一个对象中是否含有指定的属性<br>有—&gt;true 没有—&gt;false</p>
+</blockquote>
+<p>语法：</p>
+<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;name&quot;</span> <span class="keyword">in</span> obj);</span><br></pre></td></tr></table></div></figure>
+<p>JS的变量都是保存在栈内存的。基本数据类型的值在栈内存中存储<br>引用数据类型是保存在堆内存中的(开辟一个新的空间)。<br>每创建一个新的对象就会在堆内存中开辟一个新的空间，而变量保存的是对象的地址。</p>
+<p>比较两个引用数据类型的时候，比较的是对象的内存地址。</p>
 
+        <h3 id="使用对象字面量来创建一个对象"   >
+          <a href="#使用对象字面量来创建一个对象" class="heading-link"><i class="fas fa-link"></i></a>使用对象字面量来创建一个对象</h3>
+      <figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;</span><br></pre></td></tr></table></div></figure>
+<p>使用对象字面量创建的时候可以直接指定对象中的属性</p>
+<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> ogj = &#123;<span class="attr">name</span>:<span class="string">&quot;zbj&quot;</span>,</span><br><span class="line">            age:<span class="number">123</span>,</span><br><span class="line">            gender:<span class="string">&quot;男&quot;</span>,</span><br><span class="line">            obj2:&#123;name = <span class="string">&quot;shs&quot;</span>&#125;</span><br><span class="line">            &#125;;</span><br></pre></td></tr></table></div></figure>
+<hr>
 
-<p><strong>解决方法</strong><br>重装。简单粗暴，我是把kali直接移除了重装的。但是我觉得可能是我之前由于版本选错了的原因，一个restart了好几次…..卡死了？<br>由于我在装的时候，网上的办法我都试过了，如果你试过了有用，那就当我没说！但是如果还没打算尝试！建议直接卸载重装……</p>
+        <h2 id="函数"   >
+          <a href="#函数" class="heading-link"><i class="fas fa-link"></i></a>函数</h2>
+      <p>函数也是一个对象</p>
+
+        <h3 id="创建一个函数对象"   >
+          <a href="#创建一个函数对象" class="heading-link"><i class="fas fa-link"></i></a>创建一个函数对象</h3>
+      <figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> fun = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">&quot;console.log(&#x27;hello&#x27;)&quot;</span>)</span><br></pre></td></tr></table></div></figure>
+<p>调用函数<br><code>fun()</code><br>调用函数时，封装的代码会按照顺序执行</p>
+<p>函数声明</p>
+<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> 函数名(<span class="params">[形参<span class="number">1</span>，形参<span class="number">2.</span>..]</span>)</span>&#123;</span><br><span class="line">    语句...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+<p>使用函数表达式</p>
+<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="comment">//匿名函数</span></span><br><span class="line"><span class="keyword">var</span> 函数名 = <span class="function"><span class="keyword">function</span>(<span class="params">[形参<span class="number">1</span>，形参<span class="number">2.</span>..]</span>)</span>&#123;</span><br><span class="line">    语句</span><br><span class="line">&#125;;<span class="comment">//赋值语句</span></span><br></pre></td></tr></table></div></figure>
+<p>实参可以是任意的数据类型（包括对象和函数）<br>返回值也可以是任意的数据类型</p>
+<p>立即执行函数</p>
+<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">&quot;我是一个匿名函数&quot;</span>)</span><br><span class="line">&#125;)();<span class="comment">//后面加括号，调用函数，立即执行函数，往往只会执行一次</span></span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+<p>枚举（遍历）<br><code>for... in</code>语句</p>
+<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> 变量 <span class="keyword">in</span> 对象)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+        <h3 id="this"   >
+          <a href="#this" class="heading-link"><i class="fas fa-link"></i></a>this</h3>
+      <p>解析器在调用函数每次都会向函数内部传递一个隐含的参数this</p>
+<p>this指向的是一个对象（函数执行的上下文对象）</p>
+<p>根据函数调用的方式的不同，this会指向不同的对象<br>    * 1.以函数的形式调用，this永远都是window<br>    * 2.以方法的形式调用，this就是调用方法的那个对象</p>
+<p><span class="exturl"><a class="exturl__link"   href="https://zhuanlan.zhihu.com/p/42145138" >this的详解</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="构造函数"   >
+          <a href="#构造函数" class="heading-link"><i class="fas fa-link"></i></a>构造函数</h3>
+      <p>1.立即创建一个新的对象<br>2.将新建的对象设置为函数中的this，在构造函数中可以使用this来引用新建的对象<br>3.逐行执行函数中的代码<br>4.将新建的对象作为返回值返回</p>
+<p><code>instanceof</code>函数检查一个对象是否是一个类的实例</p>
 ]]></content>
   </entry>
   <entry>
-    <title>第一次使用MSF，永恒之蓝漏洞 进入Windows 7的过程</title>
-    <url>/2021/01/18/fistUse%20MSF/</url>
-    <content><![CDATA[<p>还是很激动的一个过程，大佬绕过….此处记录一下一个小菜鸡第一次用MSF的过程，有些激动</p>
+    <title>pygame</title>
+    <url>/2021/03/16/gameDemo1/</url>
+    <content><![CDATA[<p>python的一个小游戏的笔记</p>
 <a id="more"></a> 
 
-        <h3 id="前言"   >
-          <a href="#前言" class="heading-link"><i class="fas fa-link"></i></a>前言</h3>
-      <p> 本案例讲的是用利用永恒之蓝漏洞攻击Windows 7的一个过程</p>
-<ul>
-<li>永恒之蓝（Eternal Blue）<br>爆发于2017年4月14日晚，是一种利用Windows系统的<b>SMB协议</b>漏洞来获取系统的最高权限，以此来控制被入侵的计算机。甚至于2017年5月12日， 不法分子通过改造“永恒之蓝”制作了wannacry勒索病毒，使全世界大范围内遭受了该勒索病毒</li>
-<li>SMB<br>（全称是Server Message Block）是一个协议服务器信息块，它是一种客户机/服务器、请求/响应协议，通过SMB协议可以在计算机间共享文件、打印机、命名管道等资源，电脑上的网上邻居就是靠SMB实现的；SMB协议工作在应用层和会话层，可以用在TCP/IP协议之上，SMB使用TCP139端口和TCP445端口。
-        <h6 id="初始化"   >
-          <a href="#初始化" class="heading-link"><i class="fas fa-link"></i></a>初始化</h6>
-      第一次使用msf的时候，都需要进行一个初始化的过程<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylmFg.png" width="80%" height="80%"></div>
+        <h2 id="准备"   >
+          <a href="#准备" class="heading-link"><i class="fas fa-link"></i></a>准备</h2>
+      <p><code>pygame.init()</code><br>初始化所有导入的 PyGame 模块，在做其他操作之前必须执行调用该函数。</p>
 
-</li>
-</ul>
-
-        <h6 id="开启msf"   >
-          <a href="#开启msf" class="heading-link"><i class="fas fa-link"></i></a>开启msf</h6>
-      <pre><code>msfconsole</code></pre>
-<p>（开启成功界面入下）</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylMSs.png" width="80%" height="80%"></div>
-
-
-        <h6 id="漏洞扫描"   >
-          <a href="#漏洞扫描" class="heading-link"><i class="fas fa-link"></i></a>漏洞扫描</h6>
-      <div align=center><img src="https://ftp.bmp.ovh/imgs/2021/01/939bf153a38c46f2.png" width="80%" height="80%"></div>
-
-
-        <h6 id="利用漏洞"   >
-          <a href="#利用漏洞" class="heading-link"><i class="fas fa-link"></i></a>利用漏洞</h6>
-      <ul>
-<li><p>在msf搜索改漏洞ms17-010</p>
-<p>  search ms17-010</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylnYQ.png" width="80%" height="80%"></div>
-</li>
-<li><p>加载攻击模块</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylZTS.png" width="80%" height="80%"></div>
-</li>
-<li><p>查看配置相关信息<br>查看哪些配置还没有配置</p>
-<pre><code>  show options
-  show target</code></pre>
-</li>
-</ul>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/syluWj.png" width="80%" height="80%"></div>
-
-<ul>
-<li><p>检查版本，选择要应该使用的该版本的</p>
-<pre><code>  set target </code></pre>
-</li>
-</ul>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylQln.png" width="80%" height="80%"></div>
-
-
-        <h6 id="攻击"   >
-          <a href="#攻击" class="heading-link"><i class="fas fa-link"></i></a>攻击</h6>
-      <pre><code>run/exploit</code></pre>
-<p>进入成功之后就是这样的。</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/syl1O0.png" width="80%" height="80%"></div>
-失败的话会提示这个（最下面一行）
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/sy1enx.png" width="80%" height="80%"></div>
-可以输入
-
-<pre><code>help</code></pre>
-<p>查看有哪些功能（功能有很多，都可以试一下，还有很多脚本）也可以shell，进入到目标机的命令行，然后进行提权<br>（以后写一个提权的）</p>
-<p>下面是利用截取的目标机的实时屏幕</p>
-<div align=center><img src="https://s3.ax1x.com/2021/01/18/syl8mV.png" width="80%" height="80%"></div>
-
-<p>这只是一次很小很小的利用漏洞的过程，而且内容有限，很多的过程都不规范，而且还是建立在局域网内，防火墙关闭的情况…..所以后面得学习其它的内容</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>2020总结</title>
-    <url>/2021/01/02/2020Summary/</url>
-    <content><![CDATA[<p>一些关于本人的2020总结，内容实属惨不忍睹，所以建议不读….</p>
-<a id="more"></a>
-
-        <h6 id="2021-1-14-21-40"   >
-          <a href="#2021-1-14-21-40" class="heading-link"><i class="fas fa-link"></i></a>2021.1.14 /21:40</h6>
+        <h2 id="基础对象"   >
+          <a href="#基础对象" class="heading-link"><i class="fas fa-link"></i></a>基础对象</h2>
       
-        <h6 id="2020-1-8月"   >
-          <a href="#2020-1-8月" class="heading-link"><i class="fas fa-link"></i></a>2020 1-8月</h6>
-      <p>上半年在家里面，可以说是什么也没有学习，什么也没有做。有的时候突然想起那段记忆都是空白的。不知道自己每天都做了些什么。<br>一月二月在家里可能就是每天都在玩吧。至少在我仅有的记忆里面，那段记忆里面自己就是天天在家无所事事。<br>三月四月的时候。脑子里面每天都想着开学和减肥。稍稍成功一点的就是在三四月的时候减肥成功了（<del>10斤</del>），当时也不知道哪里来的毅力成功了。虽然现在已经回弹了，但是至少在当时成功了。就还是很开心的。<br>五六月的时候记不太清楚了。依旧是没天盼着开学，每天盼着能回到学校，自己的内心也是知道自己在家里面很颓。所以很想回到学校，想回去学习。那个时候开始学习了一点HTML和CSS，到现在还在用。陆陆续续，慢慢的学了很久。虽然视频也不多。最开始学个导航栏都写了一个晚上。有的时候真的觉得自己还是太笨了。<br>七八月份……更不知道自己在干嘛了…..</p>
-<p>可能上半年来最大的收获就是学了HTML和CSS吧…….说起来我都不好意思，两个那么简单的东西，自己花了大半年……</p>
+        <h3 id="屏幕对象"   >
+          <a href="#屏幕对象" class="heading-link"><i class="fas fa-link"></i></a>屏幕对象</h3>
+      <p>首先，我们需要一张画布，我们称之为“屏幕”，它是我们绘画的平台。<strong>为了创建一个屏幕，我们需要调用pygame.display 中的 set_mode 方法</strong>，然后向 <code>set_mode()</code> 传递包含屏幕窗口宽度和高度的元组（本教程中使用 800x600 尺寸）。</p>
+<figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"><span class="keyword">from</span> pygame.<span class="built_in">locals</span> <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">pygame.init()</span><br><span class="line"></span><br><span class="line">screen = pygame.display.set_mode(</span><br><span class="line">(<span class="number">800</span>,<span class="number">600</span>))</span><br></pre></td></tr></table></div></figure>
+<p>运行上述代码，将会弹出一个窗口，然后当程序退出后又立即消失。一点都不酷嘛，对吧？</p>
 
-        <h6 id="2020-9-12月"   >
-          <a href="#2020-9-12月" class="heading-link"><i class="fas fa-link"></i></a>2020 9-12月</h6>
-      <p>下半年回到学校之后，先是搬了校区。开始了大二上的学习任务。大二真的很忙很忙很忙……,莫名其妙自己就变成了大二老学姐了……九十月份自己慢慢适应了大二的学习节奏，期间把css复习了一遍，当时还是想走前端的，安安心心做一个前端。如果说是什么改变可我的想法，其实我自己也说不清楚，就像现在我自己也还是觉得自己更加适合做前端，但是自己已经在学习网安了，就好好学网安吧！<br>下半年一个偶然的机会进入了信息安全兴趣班，当时本着想找个位置安安静静的学习（我要是知道我后面可以进计协的话我一定再等等…..）后面有着大二大三的学长，在兴趣班给我们入门网安，好像又开始慢慢接触网安了。到现在自己其实也不是很能确定自己是不是适合这个专业。<br>整个方向真的需要自己好多好多的知识，而我总是无法把这些知识穿在一起，有的时候就学起来真的很困难……<br>在兴趣班好好学习，后面选进了505的网安实验室。有黄洪老师带着学习。虽然我实在没有感受到有老师带着的好处…….<br>十月份的是时候和睿宝和超鹏一起参加了国信安。可能学的HTML和CSS终于有点了用处。自己亲手做了一个静态的的页面。有些内容只有自己做了之后才算是真的自己学会了。国信安的项目最后也是提交了。对于我自己来说，我还是很满意的。</p>
-<p>下半年的学习就是，参加了国信安的项目。学习了有关网络安全的一些知识…..mysql增删改查….Java基础？十大漏洞简介？…… </p>
+        <h3 id="游戏主循环"   >
+          <a href="#游戏主循环" class="heading-link"><i class="fas fa-link"></i></a>游戏主循环</h3>
+      <p>游戏主循环/事件循环是所有操作发生的地方。在游戏过程中，它不断的更新游戏状态，渲染游戏画面和收集输入指令。<br>创建循环时，需要确保我们有办法跳出循环，退出应用。为此，我们将同时介绍一些基本的用户输入指令。<br>所有的用户输入都会进入 PyGame 的事件队列，通过调用 <code>pygame.event.get()</code> 可以访问该队列。这将返回一个包含队列里所有事件的列表，我们将循环这个列表，并根针对相应的事件类型做出反应。现在我们只关心 KEYDOWN 和 QUIT 事件</p>
 
-        <h6 id="2021-1-2-15：00"   >
-          <a href="#2021-1-2-15：00" class="heading-link"><i class="fas fa-link"></i></a>2021.1.2 /15：00</h6>
-      <p>等下个星期考试结束之后。好好写一篇有关于的2020的总结。<br>并且认真规划好2021的计划。</p>
+        <h3 id="Surface-和-Rects"   >
+          <a href="#Surface-和-Rects" class="heading-link"><i class="fas fa-link"></i></a>Surface 和 Rects</h3>
+      <p>Surface和 Rects是 PyGame 中的基本构件。可以将 Surface 看作一张白纸，你可以在上面随意绘画。我们的屏幕对象也是一个 Surface 。它们可以包含图片。Rects 是 Surface 中矩形区域的表示。</p>
+<p>让我们创建一个 50x50 像素的 Surface，然后给它涂色。由于屏幕是黑色的，所以我们使用白色。调用 <code>get_rect() </code>在 Surface上 得到一个矩形区域和 Surface 的 x 轴 和 y 轴。</p>
+
+        <h3 id="Blit-和-Flip"   >
+          <a href="#Blit-和-Flip" class="heading-link"><i class="fas fa-link"></i></a>Blit 和 Flip</h3>
+      <p>仅仅只是创建了 Surface 并不能在屏幕上看到它。为此我们需要将这个 Surface 绘制（Blit）到另一个 Surface 上。Blit 是一个专业术语，意思就是绘图。你仅仅只能从一个Surface Blit 到另一个Surface，我们的屏幕就是一个 Surface 对象。以下是我们如何将 surf 画到屏幕上：</p>
+<figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这一行表示：将surf画到屏幕 </span></span><br><span class="line"><span class="comment"># x：400.y:300的坐标上</span></span><br><span class="line">screen.blit(surf,(<span class="number">400</span>,<span class="number">300</span>))</span><br><span class="line">pygame.display.flip()</span><br></pre></td></tr></table></div></figure>
+<p><code>blit()</code> 有两个参数：要画的 Surface 和 在源 Surface 上的坐标。此处我们使用屏幕的中心，但是当你运行代码时，你会发现我们的 surf 并没有出现在屏幕的中心。**<strong>这是因为 blit() 是从左上角开始画 surf 。</strong></p>
+<p>注意在 blit 之后的<code>pygame.display.filp()</code>的调用。<strong>Flip将会更新自上次 flip 后的整个屏幕两次 flip 之间发生的修改都将在屏幕上显示</strong>。没有调用<code>flip()</code>那就什么也不会出现。</p>
 ]]></content>
   </entry>
   <entry>
@@ -393,217 +465,147 @@
       </categories>
   </entry>
   <entry>
-    <title>pygame</title>
-    <url>/2021/03/16/gameDemo1/</url>
-    <content><![CDATA[<p>python的一个小游戏的笔记</p>
+    <title>第一次使用MSF，永恒之蓝漏洞 进入Windows 7的过程</title>
+    <url>/2021/01/18/fistUse%20MSF/</url>
+    <content><![CDATA[<p>还是很激动的一个过程，大佬绕过….此处记录一下一个小菜鸡第一次用MSF的过程，有些激动</p>
 <a id="more"></a> 
 
-        <h2 id="准备"   >
-          <a href="#准备" class="heading-link"><i class="fas fa-link"></i></a>准备</h2>
-      <p><code>pygame.init()</code><br>初始化所有导入的 PyGame 模块，在做其他操作之前必须执行调用该函数。</p>
+        <h3 id="前言"   >
+          <a href="#前言" class="heading-link"><i class="fas fa-link"></i></a>前言</h3>
+      <p> 本案例讲的是用利用永恒之蓝漏洞攻击Windows 7的一个过程</p>
+<ul>
+<li>永恒之蓝（Eternal Blue）<br>爆发于2017年4月14日晚，是一种利用Windows系统的<b>SMB协议</b>漏洞来获取系统的最高权限，以此来控制被入侵的计算机。甚至于2017年5月12日， 不法分子通过改造“永恒之蓝”制作了wannacry勒索病毒，使全世界大范围内遭受了该勒索病毒</li>
+<li>SMB<br>（全称是Server Message Block）是一个协议服务器信息块，它是一种客户机/服务器、请求/响应协议，通过SMB协议可以在计算机间共享文件、打印机、命名管道等资源，电脑上的网上邻居就是靠SMB实现的；SMB协议工作在应用层和会话层，可以用在TCP/IP协议之上，SMB使用TCP139端口和TCP445端口。
+        <h6 id="初始化"   >
+          <a href="#初始化" class="heading-link"><i class="fas fa-link"></i></a>初始化</h6>
+      第一次使用msf的时候，都需要进行一个初始化的过程<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylmFg.png" width="80%" height="80%"></div>
 
-        <h2 id="基础对象"   >
-          <a href="#基础对象" class="heading-link"><i class="fas fa-link"></i></a>基础对象</h2>
-      
-        <h3 id="屏幕对象"   >
-          <a href="#屏幕对象" class="heading-link"><i class="fas fa-link"></i></a>屏幕对象</h3>
-      <p>首先，我们需要一张画布，我们称之为“屏幕”，它是我们绘画的平台。<strong>为了创建一个屏幕，我们需要调用pygame.display 中的 set_mode 方法</strong>，然后向 <code>set_mode()</code> 传递包含屏幕窗口宽度和高度的元组（本教程中使用 800x600 尺寸）。</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"><span class="keyword">from</span> pygame.<span class="built_in">locals</span> <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">pygame.init()</span><br><span class="line"></span><br><span class="line">screen = pygame.display.set_mode(</span><br><span class="line">(<span class="number">800</span>,<span class="number">600</span>))</span><br></pre></td></tr></table></div></figure>
-<p>运行上述代码，将会弹出一个窗口，然后当程序退出后又立即消失。一点都不酷嘛，对吧？</p>
+</li>
+</ul>
 
-        <h3 id="游戏主循环"   >
-          <a href="#游戏主循环" class="heading-link"><i class="fas fa-link"></i></a>游戏主循环</h3>
-      <p>游戏主循环/事件循环是所有操作发生的地方。在游戏过程中，它不断的更新游戏状态，渲染游戏画面和收集输入指令。<br>创建循环时，需要确保我们有办法跳出循环，退出应用。为此，我们将同时介绍一些基本的用户输入指令。<br>所有的用户输入都会进入 PyGame 的事件队列，通过调用 <code>pygame.event.get()</code> 可以访问该队列。这将返回一个包含队列里所有事件的列表，我们将循环这个列表，并根针对相应的事件类型做出反应。现在我们只关心 KEYDOWN 和 QUIT 事件</p>
+        <h6 id="开启msf"   >
+          <a href="#开启msf" class="heading-link"><i class="fas fa-link"></i></a>开启msf</h6>
+      <pre><code>msfconsole</code></pre>
+<p>（开启成功界面入下）</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylMSs.png" width="80%" height="80%"></div>
 
-        <h3 id="Surface-和-Rects"   >
-          <a href="#Surface-和-Rects" class="heading-link"><i class="fas fa-link"></i></a>Surface 和 Rects</h3>
-      <p>Surface和 Rects是 PyGame 中的基本构件。可以将 Surface 看作一张白纸，你可以在上面随意绘画。我们的屏幕对象也是一个 Surface 。它们可以包含图片。Rects 是 Surface 中矩形区域的表示。</p>
-<p>让我们创建一个 50x50 像素的 Surface，然后给它涂色。由于屏幕是黑色的，所以我们使用白色。调用 <code>get_rect() </code>在 Surface上 得到一个矩形区域和 Surface 的 x 轴 和 y 轴。</p>
 
-        <h3 id="Blit-和-Flip"   >
-          <a href="#Blit-和-Flip" class="heading-link"><i class="fas fa-link"></i></a>Blit 和 Flip</h3>
-      <p>仅仅只是创建了 Surface 并不能在屏幕上看到它。为此我们需要将这个 Surface 绘制（Blit）到另一个 Surface 上。Blit 是一个专业术语，意思就是绘图。你仅仅只能从一个Surface Blit 到另一个Surface，我们的屏幕就是一个 Surface 对象。以下是我们如何将 surf 画到屏幕上：</p>
-<figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这一行表示：将surf画到屏幕 </span></span><br><span class="line"><span class="comment"># x：400.y:300的坐标上</span></span><br><span class="line">screen.blit(surf,(<span class="number">400</span>,<span class="number">300</span>))</span><br><span class="line">pygame.display.flip()</span><br></pre></td></tr></table></div></figure>
-<p><code>blit()</code> 有两个参数：要画的 Surface 和 在源 Surface 上的坐标。此处我们使用屏幕的中心，但是当你运行代码时，你会发现我们的 surf 并没有出现在屏幕的中心。**<strong>这是因为 blit() 是从左上角开始画 surf 。</strong></p>
-<p>注意在 blit 之后的<code>pygame.display.filp()</code>的调用。<strong>Flip将会更新自上次 flip 后的整个屏幕两次 flip 之间发生的修改都将在屏幕上显示</strong>。没有调用<code>flip()</code>那就什么也不会出现。</p>
+        <h6 id="漏洞扫描"   >
+          <a href="#漏洞扫描" class="heading-link"><i class="fas fa-link"></i></a>漏洞扫描</h6>
+      <div align=center><img src="https://ftp.bmp.ovh/imgs/2021/01/939bf153a38c46f2.png" width="80%" height="80%"></div>
+
+
+        <h6 id="利用漏洞"   >
+          <a href="#利用漏洞" class="heading-link"><i class="fas fa-link"></i></a>利用漏洞</h6>
+      <ul>
+<li><p>在msf搜索改漏洞ms17-010</p>
+<p>  search ms17-010</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylnYQ.png" width="80%" height="80%"></div>
+</li>
+<li><p>加载攻击模块</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylZTS.png" width="80%" height="80%"></div>
+</li>
+<li><p>查看配置相关信息<br>查看哪些配置还没有配置</p>
+<pre><code>  show options
+  show target</code></pre>
+</li>
+</ul>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syluWj.png" width="80%" height="80%"></div>
+
+<ul>
+<li><p>检查版本，选择要应该使用的该版本的</p>
+<pre><code>  set target </code></pre>
+</li>
+</ul>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylQln.png" width="80%" height="80%"></div>
+
+
+        <h6 id="攻击"   >
+          <a href="#攻击" class="heading-link"><i class="fas fa-link"></i></a>攻击</h6>
+      <pre><code>run/exploit</code></pre>
+<p>进入成功之后就是这样的。</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syl1O0.png" width="80%" height="80%"></div>
+失败的话会提示这个（最下面一行）
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/sy1enx.png" width="80%" height="80%"></div>
+可以输入
+
+<pre><code>help</code></pre>
+<p>查看有哪些功能（功能有很多，都可以试一下，还有很多脚本）也可以shell，进入到目标机的命令行，然后进行提权<br>（以后写一个提权的）</p>
+<p>下面是利用截取的目标机的实时屏幕</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syl8mV.png" width="80%" height="80%"></div>
+
+<p>这只是一次很小很小的利用漏洞的过程，而且内容有限，很多的过程都不规范，而且还是建立在局域网内，防火墙关闭的情况…..所以后面得学习其它的内容</p>
 ]]></content>
   </entry>
   <entry>
-    <title>JavaScirpt笔记</title>
-    <url>/2021/03/18/JavaScript/</url>
-    <content><![CDATA[<p>学习js中的笔记</p>
+    <title>记一次kali的Nessus的安装</title>
+    <url>/2021/01/17/firstScans/</url>
+    <content><![CDATA[<p>由于学习中要用到Nessus，今天在安装的过程中遇到了几个问题，记录一下。</p>
 <a id="more"></a>
 
-        <h2 id="JavaScript介绍"   >
-          <a href="#JavaScript介绍" class="heading-link"><i class="fas fa-link"></i></a>JavaScript介绍</h2>
-      <p>ECMAScript(ES):js的标准，这标准需要由各个厂商去实现（不同浏览器对该标准有不同的实现）<br>Chrome V8 最快<br>完整的 JavaScript 实现包含以下几个部分（见图 1-1）：</p>
-<blockquote>
-<p>核心（ECMAScript）<br>文档对象模型（DOM）<br>浏览器对象模型（BOM）</p>
-</blockquote>
-<hr>
+        <h4 id="安装过程"   >
+          <a href="#安装过程" class="heading-link"><i class="fas fa-link"></i></a>安装过程</h4>
+      <p>Nessus安装的教程在网上有很多。前面步骤都是一样的。在网上下载好两个压缩包，拖到kali 里面去</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/17/syKgYj.png" width="80%" height="80%"></div>
 
-        <h2 id="语言基础"   >
-          <a href="#语言基础" class="heading-link"><i class="fas fa-link"></i></a>语言基础</h2>
-      <p>区分大小写<br>第一个字符必须是一个字母、下划线（_）或美元符号（$）；<br>剩下的其他字符可以是字母、下划线、美元符号或数字。</p>
-<p>字面量：常量，不可改变的值</p>
 
-        <h3 id="全局作用域"   >
-          <a href="#全局作用域" class="heading-link"><i class="fas fa-link"></i></a>全局作用域</h3>
-      <blockquote>
-<p>1.全局作用域在页面打开的时候创建，在页面关闭的时候销毁<br>2.在全局作用域中有个全局对象window<br>3.在全局作用域中：<br>创建的变量会作为window对象的属性保存<br>创建的函数会作为window对象的方法保存</p>
-</blockquote>
-
-        <h3 id="函数作用域"   >
-          <a href="#函数作用域" class="heading-link"><i class="fas fa-link"></i></a>函数作用域</h3>
-      <blockquote>
-<p>调用函数的时候船舰的作用域，函数执行完毕之后，函数作用域销毁<br>每调用一个函数就创建一个作用域，他们之间相互独立<br>在函数作用域中可以访问到全局作用域的变量（反过来不可）<br>当在函数作用域中操作一个变量，会先在自身作用域中寻找（就近原则），如果没有，就向<strong>上一级</strong>寻找<br>在函数中访问全局变量，可以使用<code>window.变量</code><br>在函数作用域中也有声明提升的特性。在函数中所有代码执行之前创建</p>
-</blockquote>
-
-        <h3 id="var关键字"   >
-          <a href="#var关键字" class="heading-link"><i class="fas fa-link"></i></a>var关键字</h3>
-      <p><code>var 变量名</code><br>不初始化的情况下，变量会保存一个特殊值 undefined</p>
-
-        <h4 id="var-声明作用域"   >
-          <a href="#var-声明作用域" class="heading-link"><i class="fas fa-link"></i></a>var 声明作用域</h4>
-      <p>关键的问题在于，使用<strong>var 操作符定义的变量会成为包含它的函数的局部变量。</strong><br>比如，使用 var在一个函数内部定义一个变量，就意味着该变量将在函数退出时被销毁：</p>
-
-        <h4 id="var-声明提升"   >
-          <a href="#var-声明提升" class="heading-link"><i class="fas fa-link"></i></a>var 声明提升</h4>
-      <p>使用var声明的变量，<strong>会在所有代码执行之前被声明，但是不会赋值。</strong></p>
-<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line"> <span class="built_in">console</span>.log(age); </span><br><span class="line"> <span class="keyword">var</span> age = <span class="number">26</span>; </span><br><span class="line">&#125; </span><br><span class="line">foo(); <span class="comment">// undefined </span></span><br></pre></td></tr></table></div></figure>
-<p>之所以不会报错，是因为 ECMAScript 运行时把它看成等价于如下代码：</p>
-<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line"> <span class="keyword">var</span> age; </span><br><span class="line"> <span class="built_in">console</span>.log(age); </span><br><span class="line"> age = <span class="number">26</span>; </span><br><span class="line">&#125; </span><br><span class="line">foo(); <span class="comment">// undefined </span></span><br></pre></td></tr></table></div></figure>
-<p>这就是所谓的“提升”（hoist），也就是把所有变量声明都拉到函数作用域的顶部。此外，反复多次<br>使用 var 声明同一个变量也没有问题：</p>
-<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line"> <span class="keyword">var</span> age = <span class="number">16</span>; </span><br><span class="line"> <span class="keyword">var</span> age = <span class="number">26</span>; </span><br><span class="line"> <span class="keyword">var</span> age = <span class="number">36</span>; </span><br><span class="line"> <span class="built_in">console</span>.log(age); </span><br><span class="line">&#125; </span><br><span class="line">foo(); <span class="comment">// 36 </span></span><br></pre></td></tr></table></div></figure>
-
-        <h3 id="function提升"   >
-          <a href="#function提升" class="heading-link"><i class="fas fa-link"></i></a>function提升</h3>
-      <p>1.<strong>使用函数声明形式创建的函数<br><code>function 函数()&#123;&#125;</code>，它会在所有代码执行之前就被创建</strong><br>2.使用函数表达式创建的函数，不会被提前创建。</p>
-
-        <h3 id="let-声明"   >
-          <a href="#let-声明" class="heading-link"><i class="fas fa-link"></i></a>let 声明</h3>
-      <p>let 跟 var 的作用差不多，但有着非常重要的区别。最明显的区别是，let 声明的范围是块作用域，而 var 声明的范围是函数作用域。<strong>块作用域是函数作用域的子集，因此适用于 var 的作用域限制同样也适用于 let。</strong></p>
-
-        <h4 id="let-声明的变量不会在作用域中被提升"   >
-          <a href="#let-声明的变量不会在作用域中被提升" class="heading-link"><i class="fas fa-link"></i></a>let 声明的变量不会在作用域中被提升</h4>
-      <figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="comment">// age 不会被提升</span></span><br><span class="line"><span class="built_in">console</span>.log(age); <span class="comment">// ReferenceError：age 没有定义</span></span><br><span class="line"><span class="keyword">let</span> age = <span class="number">26</span>; </span><br></pre></td></tr></table></div></figure>
-<p>在解析代码时，JavaScript 引擎也会注意出现在块后面的 let 声明，只不过在此之前不能以任何方式来引用未声明的变量。在 let 声明之前的执行瞬间被称为“暂时性死区”（temporal dead zone），在此阶段引用任何后面才声明的变量都会抛出ReferenceError。</p>
-
-        <h4 id="全局声明"   >
-          <a href="#全局声明" class="heading-link"><i class="fas fa-link"></i></a>全局声明</h4>
-      <p>与 var 关键字不同，使用 let 在全局作用域中声明的变量不会成为 window 对象的属性（var 声明的变量则会）。</p>
-
-        <h3 id="数据类型"   >
-          <a href="#数据类型" class="heading-link"><i class="fas fa-link"></i></a>数据类型</h3>
-      <p>ES有6钟简单数据类型<br>Undefined<br>Null<br>Boolean<br>Number<br>String<br>Symbol</p>
-
-        <h4 id="typeof操作符"   >
-          <a href="#typeof操作符" class="heading-link"><i class="fas fa-link"></i></a>typeof操作符</h4>
-      <p>使用typeof运算符来检测变量的数据类型<br>typeof的返回值</p>
-<p>typeof运算符的返回类型为字符串</p>
-
-        <h4 id="Undefined"   >
-          <a href="#Undefined" class="heading-link"><i class="fas fa-link"></i></a>Undefined</h4>
-      <p>Undifined只有一个字：undenfined<br>使用var和let没有进行初始化的时候就会赋值undefined</p>
-<p>对未声明的变量，只能执行一个有用的操作，就是对他调用typeof<br>返回结果为：undefined</p>
-
-        <h4 id="Null"   >
-          <a href="#Null" class="heading-link"><i class="fas fa-link"></i></a>Null</h4>
-      <p>Null 类型同样只有一个值，即特殊值 null。逻辑上讲，null 值表示一个<strong>空对象指针</strong>，这也是给typeof 传一个 null 会返回”object”的原因：</p>
-<p>定义将来要保存对象值的变量时，建议使用 null 来初始化，不要使用其他值</p>
-
-        <h4 id="Number"   >
-          <a href="#Number" class="heading-link"><i class="fas fa-link"></i></a>Number</h4>
-      <p>八进制 —-&gt; 0（前缀）<br>十六进制 —-&gt; 0x（前缀）</p>
-
-        <h5 id="浮点值"   >
-          <a href="#浮点值" class="heading-link"><i class="fas fa-link"></i></a>浮点值</h5>
-      <p>因为<strong>浮点值使用的内存空间是整数的两倍</strong>，所以在小数点后面没有数字（后面是.0）的情况下，数值都会变成整数。<br>非常大或者非常小的，用科学计数法表示—-&gt;例如：<code>3e-7</code></p>
-
-        <h5 id="NaN"   >
-          <a href="#NaN" class="heading-link"><i class="fas fa-link"></i></a>NaN</h5>
-      <p>NaN—-&gt; Not a Number<br>NaN 的操作始终返回 NaN（如 NaN/10）<br>isNaN()函数。该函数接收一个参数，可以是任意数据类型，然后判断<br>这个参数是否“不是数值”。把一个值传给 isNaN()后，<strong>该函数会尝试把它转换为数值</strong>。某些非数值的值可以直接转换成数值，如字符串”10”或布尔值<br><code>console.log(isNaN(&quot;blue&quot;)); // true，不可以转换为数值</code></p>
-
-        <h4 id="强制类型转换"   >
-          <a href="#强制类型转换" class="heading-link"><i class="fas fa-link"></i></a>强制类型转换</h4>
-      <p>非数值转换为数值：</p>
-<p><strong>Number()、parseInt()和 parseFloat()。</strong><br>Number()是转型函数，可用于任何数据类型。后两个函数主要用于将字符串转换为数值。<br><strong>**Number()</strong></p>
-<blockquote>
-<p>1.纯数字转化成数字<br>2.当字符串中含有非数字的内容的时候，转换成NaN<br>3.空字符串（全部是空格）—-&gt; 0<br>4.true—&gt; 1  false —&gt; 0<br>5.null—&gt;NaN undefined—&gt; NaN  </p>
-</blockquote>
-<p><strong>parseInt()、parseFloat()</strong></p>
-<blockquote>
-<p>1.parsInt()将字符串中有效的整数（小数）取出来，然后转化成Number<br>2.如果对非String使用，他会先将其转换成String</p>
-</blockquote>
-<p><strong>转化成字符串</strong><br>方法一：<strong>toString方法</strong><br>方法二：<strong>String()函数</strong></p>
-<p>区别：null和undefined没有toString方法，String()可以将null—&gt;”null”,undefined—&gt;”undefined”</p>
-<p><strong>Boolean转化</strong></p>
-<blockquote>
-<p>数字—&gt; 布尔 ：除了0和NaN,其余都是true<br>字符串—&gt; 布尔：除了空串，其余都是true<br>null和undefined都会转化成false<br>对象也会转化成true</p>
-</blockquote>
-<hr>
-
-        <h2 id="对象（引用数据类型）"   >
-          <a href="#对象（引用数据类型）" class="heading-link"><i class="fas fa-link"></i></a>对象（引用数据类型）</h2>
+        <h4 id="问题"   >
+          <a href="#问题" class="heading-link"><i class="fas fa-link"></i></a>问题</h4>
       
-        <h3 id="创建对象"   >
-          <a href="#创建对象" class="heading-link"><i class="fas fa-link"></i></a>创建对象</h3>
-      <figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br></pre></td></tr></table></div></figure>
+        <h5 id="1-进入Nessus之后没有Scans页面，只有Setting"   >
+          <a href="#1-进入Nessus之后没有Scans页面，只有Setting" class="heading-link"><i class="fas fa-link"></i></a>1.进入Nessus之后没有Scans页面，只有Setting</h5>
+      <p>这个问题是因为之前在网上找教程安装的时候，很多教程显示在初始化选择版本选的是第四个。</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syMrg1.png" width="50%" height="50%"></div>
+但其实在选择第四个的时候选的是管理版本。进入界面之后就没有Scans页面。
 
-        <h3 id="添加属性"   >
-          <a href="#添加属性" class="heading-link"><i class="fas fa-link"></i></a>添加属性</h3>
-      <figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line">obj.name = <span class="string">&quot;孙悟空&quot;</span>;</span><br></pre></td></tr></table></div></figure>
+<p>解决方法也很简单<br>1.页面更新加载进入https：//localhost：8834<br>2.在setting页面选择如下</p>
+<div align=center><img src="https://s3.ax1x.com/2021/01/18/syMx8s.png" width="80%" height="80%"></div>
+点击小笔之后输入之前发在邮箱里面的激活码，然后页面会跳到加载进度条那页，后面进去之后就好了
 
-        <h3 id="读取属性"   >
-          <a href="#读取属性" class="heading-link"><i class="fas fa-link"></i></a>读取属性</h3>
-      <figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line">obj.name;</span><br></pre></td></tr></table></div></figure>
-<p>如果需要使用特殊的属性名(格式如下，读取的时候相同)<br>使用<code>[]</code>操作属性会更加灵活。可以在<code>[]</code>中传递一个变量，这样变量值是多少就会去读取那个属性、</p>
-<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line">obj[<span class="string">&quot;123&quot;</span>] = <span class="number">789</span>;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="keyword">var</span> n =<span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj[n]) = <span class="number">789</span>;</span><br></pre></td></tr></table></div></figure>
 
-        <h3 id="in运算符"   >
-          <a href="#in运算符" class="heading-link"><i class="fas fa-link"></i></a>in运算符</h3>
-      <blockquote>
-<p>通过该运算符可以检查一个对象中是否含有指定的属性<br>有—&gt;true 没有—&gt;false</p>
-</blockquote>
-<p>语法：</p>
-<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;name&quot;</span> <span class="keyword">in</span> obj);</span><br></pre></td></tr></table></div></figure>
-<p>JS的变量都是保存在栈内存的。基本数据类型的值在栈内存中存储<br>引用数据类型是保存在堆内存中的(开辟一个新的空间)。<br>每创建一个新的对象就会在堆内存中开辟一个新的空间，而变量保存的是对象的地址。</p>
-<p>比较两个引用数据类型的时候，比较的是对象的内存地址。</p>
+        <h5 id="2-更新进度条回滚，无法加载出来"   >
+          <a href="#2-更新进度条回滚，无法加载出来" class="heading-link"><i class="fas fa-link"></i></a>2.更新进度条回滚，无法加载出来</h5>
+      <div align=center><img src="https://s3.ax1x.com/2021/01/18/syMz2n.png" width="80%" height="80%"></div>
+说真的，这个问题今天难倒了班上一半的同学，具体原因是什么不是很知道，网上说法也不一致。
 
-        <h3 id="使用对象字面量来创建一个对象"   >
-          <a href="#使用对象字面量来创建一个对象" class="heading-link"><i class="fas fa-link"></i></a>使用对象字面量来创建一个对象</h3>
-      <figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;</span><br></pre></td></tr></table></div></figure>
-<p>使用对象字面量创建的时候可以直接指定对象中的属性</p>
-<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> ogj = &#123;<span class="attr">name</span>:<span class="string">&quot;zbj&quot;</span>,</span><br><span class="line">            age:<span class="number">123</span>,</span><br><span class="line">            gender:<span class="string">&quot;男&quot;</span>,</span><br><span class="line">            obj2:&#123;name = <span class="string">&quot;shs&quot;</span>&#125;</span><br><span class="line">            &#125;;</span><br></pre></td></tr></table></div></figure>
-<hr>
 
-        <h2 id="函数"   >
-          <a href="#函数" class="heading-link"><i class="fas fa-link"></i></a>函数</h2>
-      <p>函数也是一个对象</p>
+<p><strong>解决方法</strong><br>重装。简单粗暴，我是把kali直接移除了重装的。但是我觉得可能是我之前由于版本选错了的原因，一个restart了好几次…..卡死了？<br>由于我在装的时候，网上的办法我都试过了，如果你试过了有用，那就当我没说！但是如果还没打算尝试！建议直接卸载重装……</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>2020总结</title>
+    <url>/2021/01/02/2020Summary/</url>
+    <content><![CDATA[<p>一些关于本人的2020总结，内容实属惨不忍睹，所以建议不读….</p>
+<a id="more"></a>
 
-        <h3 id="创建一个函数对象"   >
-          <a href="#创建一个函数对象" class="heading-link"><i class="fas fa-link"></i></a>创建一个函数对象</h3>
-      <figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> fun = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">&quot;console.log(&#x27;hello&#x27;)&quot;</span>)</span><br></pre></td></tr></table></div></figure>
-<p>调用函数<br><code>fun()</code><br>调用函数时，封装的代码会按照顺序执行</p>
-<p>函数声明</p>
-<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> 函数名(<span class="params">[形参<span class="number">1</span>，形参<span class="number">2.</span>..]</span>)</span>&#123;</span><br><span class="line">    语句...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
-<p>使用函数表达式</p>
-<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="comment">//匿名函数</span></span><br><span class="line"><span class="keyword">var</span> 函数名 = <span class="function"><span class="keyword">function</span>(<span class="params">[形参<span class="number">1</span>，形参<span class="number">2.</span>..]</span>)</span>&#123;</span><br><span class="line">    语句</span><br><span class="line">&#125;;<span class="comment">//赋值语句</span></span><br></pre></td></tr></table></div></figure>
-<p>实参可以是任意的数据类型（包括对象和函数）<br>返回值也可以是任意的数据类型</p>
-<p>立即执行函数</p>
-<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">&quot;我是一个匿名函数&quot;</span>)</span><br><span class="line">&#125;)();<span class="comment">//后面加括号，调用函数，立即执行函数，往往只会执行一次</span></span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
-<p>枚举（遍历）<br><code>for... in</code>语句</p>
-<figure class="highlight javascript"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> 变量 <span class="keyword">in</span> 对象)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+        <h6 id="2021-1-14-21-40"   >
+          <a href="#2021-1-14-21-40" class="heading-link"><i class="fas fa-link"></i></a>2021.1.14 /21:40</h6>
+      
+        <h6 id="2020-1-8月"   >
+          <a href="#2020-1-8月" class="heading-link"><i class="fas fa-link"></i></a>2020 1-8月</h6>
+      <p>上半年在家里面，可以说是什么也没有学习，什么也没有做。有的时候突然想起那段记忆都是空白的。不知道自己每天都做了些什么。<br>一月二月在家里可能就是每天都在玩吧。至少在我仅有的记忆里面，那段记忆里面自己就是天天在家无所事事。<br>三月四月的时候。脑子里面每天都想着开学和减肥。稍稍成功一点的就是在三四月的时候减肥成功了（<del>10斤</del>），当时也不知道哪里来的毅力成功了。虽然现在已经回弹了，但是至少在当时成功了。就还是很开心的。<br>五六月的时候记不太清楚了。依旧是没天盼着开学，每天盼着能回到学校，自己的内心也是知道自己在家里面很颓。所以很想回到学校，想回去学习。那个时候开始学习了一点HTML和CSS，到现在还在用。陆陆续续，慢慢的学了很久。虽然视频也不多。最开始学个导航栏都写了一个晚上。有的时候真的觉得自己还是太笨了。<br>七八月份……更不知道自己在干嘛了…..</p>
+<p>可能上半年来最大的收获就是学了HTML和CSS吧…….说起来我都不好意思，两个那么简单的东西，自己花了大半年……</p>
 
-        <h3 id="this"   >
-          <a href="#this" class="heading-link"><i class="fas fa-link"></i></a>this</h3>
-      <p>解析器在调用函数每次都会向函数内部传递一个隐含的参数this</p>
-<p>this指向的是一个对象（函数执行的上下文对象）</p>
-<p>根据函数调用的方式的不同，this会指向不同的对象<br>    * 1.以函数的形式调用，this永远都是window<br>    * 2.以方法的形式调用，this就是调用方法的那个对象</p>
-<p><span class="exturl"><a class="exturl__link"   href="https://zhuanlan.zhihu.com/p/42145138" >this的详解</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+        <h6 id="2020-9-12月"   >
+          <a href="#2020-9-12月" class="heading-link"><i class="fas fa-link"></i></a>2020 9-12月</h6>
+      <p>下半年回到学校之后，先是搬了校区。开始了大二上的学习任务。大二真的很忙很忙很忙……,莫名其妙自己就变成了大二老学姐了……九十月份自己慢慢适应了大二的学习节奏，期间把css复习了一遍，当时还是想走前端的，安安心心做一个前端。如果说是什么改变可我的想法，其实我自己也说不清楚，就像现在我自己也还是觉得自己更加适合做前端，但是自己已经在学习网安了，就好好学网安吧！<br>下半年一个偶然的机会进入了信息安全兴趣班，当时本着想找个位置安安静静的学习（我要是知道我后面可以进计协的话我一定再等等…..）后面有着大二大三的学长，在兴趣班给我们入门网安，好像又开始慢慢接触网安了。到现在自己其实也不是很能确定自己是不是适合这个专业。<br>整个方向真的需要自己好多好多的知识，而我总是无法把这些知识穿在一起，有的时候就学起来真的很困难……<br>在兴趣班好好学习，后面选进了505的网安实验室。有黄洪老师带着学习。虽然我实在没有感受到有老师带着的好处…….<br>十月份的是时候和睿宝和超鹏一起参加了国信安。可能学的HTML和CSS终于有点了用处。自己亲手做了一个静态的的页面。有些内容只有自己做了之后才算是真的自己学会了。国信安的项目最后也是提交了。对于我自己来说，我还是很满意的。</p>
+<p>下半年的学习就是，参加了国信安的项目。学习了有关网络安全的一些知识…..mysql增删改查….Java基础？十大漏洞简介？…… </p>
 
-        <h3 id="构造函数"   >
-          <a href="#构造函数" class="heading-link"><i class="fas fa-link"></i></a>构造函数</h3>
-      ]]></content>
+        <h6 id="2021-1-2-15：00"   >
+          <a href="#2021-1-2-15：00" class="heading-link"><i class="fas fa-link"></i></a>2021.1.2 /15：00</h6>
+      <p>等下个星期考试结束之后。好好写一篇有关于的2020的总结。<br>并且认真规划好2021的计划。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>我的第一篇博客</title>
+    <url>/2020/12/28/Fist/</url>
+    <content><![CDATA[<p>踩踩雷，各种报错之后，也是搭建好了这个完整的blog<br>（至少目前来看对于我来时说完整的…..以后有问题以后再说吧)</p>
+]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>Fist Blog</tag>
+      </tags>
   </entry>
 </search>
