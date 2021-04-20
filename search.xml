@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>操作系统学习笔记</title>
+    <url>/2021/04/19/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<p>关于操作系统的一些学习笔记</p>
+<a id="more"></a>
+
+        <h2 id="定义、功能、目标"   >
+          <a href="#定义、功能、目标" class="heading-link"><i class="undefined"></i></a>定义、功能、目标</h2>
+      <p>定义:</p>
+<p>（进程是一个程序执行的过程。<strong>执行前需要将程序放在内存中，才能被CPU处理</strong>）</p>
+
+        <h3 id="功能："   >
+          <a href="#功能：" class="heading-link"><i class="undefined"></i></a>功能：</h3>
+      <p><strong>文件管理<br>存储器（内存）管理<br>处理机管理<br>设备管理</strong></p>
+
+        <h4 id="用户接口"   >
+          <a href="#用户接口" class="heading-link"><i class="undefined"></i></a>用户接口</h4>
+      
+        <h5 id="1-命令接口（允许用户直接使用）"   >
+          <a href="#1-命令接口（允许用户直接使用）" class="heading-link"><i class="undefined"></i></a>1.命令接口（允许用户直接使用）</h5>
+      <p>联机命令接口<br>脱机命令接口 </p>
+
+        <h5 id="2-程序接口"   >
+          <a href="#2-程序接口" class="heading-link"><i class="undefined"></i></a>2.程序接口</h5>
+      <p>允许用户通过程序间接使用，由一组系统调用组成<br>（程序接口=系统调用） </p>
+
+        <h4 id="GUI图形用户界面"   >
+          <a href="#GUI图形用户界面" class="heading-link"><i class="undefined"></i></a>GUI图形用户界面</h4>
+      
+        <h2 id="操作系统的四个特征"   >
+          <a href="#操作系统的四个特征" class="heading-link"><i class="undefined"></i></a>操作系统的四个特征</h2>
+      
+        <h3 id="并发"   >
+          <a href="#并发" class="heading-link"><i class="undefined"></i></a>并发</h3>
+      <p>两个或者多个 事件在同一时间间隔内发生。(宏观上面是同时发生的，微观交替发生))<br>并行：两个或者多个事件在同一时刻同时发生</p>
+
+        <h3 id="共享"   >
+          <a href="#共享" class="heading-link"><i class="undefined"></i></a>共享</h3>
+      <p><strong>资源共享，是指系统中的资源可供内存中多个并发执行的进程共同使用。</strong></p>
+
+        <h4 id="互斥共享方式"   >
+          <a href="#互斥共享方式" class="heading-link"><i class="undefined"></i></a>互斥共享方式</h4>
+      <p><strong>一个时间段内只允许一个进程访问该资源（例如，摄像头只能给一个进程使用）</strong></p>
+
+        <h4 id="同时共享方式"   >
+          <a href="#同时共享方式" class="heading-link"><i class="undefined"></i></a>同时共享方式</h4>
+      <p><strong>允许一个时间段内有多个进程”同时”对它们进行访问</strong><br>（”同时”宏观上，微观上面还是交替执行的。例如：同时读取发送文件。但有的时候真的可以同时使用：例如同时使用扬声器打电话和放歌）</p>
+
+        <h5 id="并发和共享是互为存在条件"   >
+          <a href="#并发和共享是互为存在条件" class="heading-link"><i class="undefined"></i></a>并发和共享是互为存在条件</h5>
+      
+        <h3 id="虚拟"   >
+          <a href="#虚拟" class="heading-link"><i class="undefined"></i></a>虚拟</h3>
+      
+        <h3 id="异步"   >
+          <a href="#异步" class="heading-link"><i class="undefined"></i></a>异步</h3>
+      ]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+  </entry>
+  <entry>
     <title>JavaScirpt笔记</title>
     <url>/2021/03/18/JavaScript/</url>
     <content><![CDATA[<p>学习js中的笔记</p>
@@ -182,39 +243,42 @@
   </entry>
   <entry>
     <title>pygame</title>
-    <url>/2021/03/16/gameDemo1/</url>
+    <url>/2021/03/16/Pygame/</url>
     <content><![CDATA[<p>python的一个小游戏的笔记</p>
 <a id="more"></a> 
 
         <h2 id="准备"   >
-          <a href="#准备" class="heading-link"><i class="fas fa-link"></i></a>准备</h2>
+          <a href="#准备" class="heading-link"><i class="undefined"></i></a>准备</h2>
       <p><code>pygame.init()</code><br>初始化所有导入的 PyGame 模块，在做其他操作之前必须执行调用该函数。</p>
 
         <h2 id="基础对象"   >
-          <a href="#基础对象" class="heading-link"><i class="fas fa-link"></i></a>基础对象</h2>
+          <a href="#基础对象" class="heading-link"><i class="undefined"></i></a>基础对象</h2>
       
         <h3 id="屏幕对象"   >
-          <a href="#屏幕对象" class="heading-link"><i class="fas fa-link"></i></a>屏幕对象</h3>
+          <a href="#屏幕对象" class="heading-link"><i class="undefined"></i></a>屏幕对象</h3>
       <p>首先，我们需要一张画布，我们称之为“屏幕”，它是我们绘画的平台。<strong>为了创建一个屏幕，我们需要调用pygame.display 中的 set_mode 方法</strong>，然后向 <code>set_mode()</code> 传递包含屏幕窗口宽度和高度的元组（本教程中使用 800x600 尺寸）。</p>
 <figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pygame</span><br><span class="line"><span class="keyword">from</span> pygame.<span class="built_in">locals</span> <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">pygame.init()</span><br><span class="line"></span><br><span class="line">screen = pygame.display.set_mode(</span><br><span class="line">(<span class="number">800</span>,<span class="number">600</span>))</span><br></pre></td></tr></table></div></figure>
 <p>运行上述代码，将会弹出一个窗口，然后当程序退出后又立即消失。一点都不酷嘛，对吧？</p>
 
         <h3 id="游戏主循环"   >
-          <a href="#游戏主循环" class="heading-link"><i class="fas fa-link"></i></a>游戏主循环</h3>
+          <a href="#游戏主循环" class="heading-link"><i class="undefined"></i></a>游戏主循环</h3>
       <p>游戏主循环/事件循环是所有操作发生的地方。在游戏过程中，它不断的更新游戏状态，渲染游戏画面和收集输入指令。<br>创建循环时，需要确保我们有办法跳出循环，退出应用。为此，我们将同时介绍一些基本的用户输入指令。<br>所有的用户输入都会进入 PyGame 的事件队列，通过调用 <code>pygame.event.get()</code> 可以访问该队列。这将返回一个包含队列里所有事件的列表，我们将循环这个列表，并根针对相应的事件类型做出反应。现在我们只关心 KEYDOWN 和 QUIT 事件</p>
 
         <h3 id="Surface-和-Rects"   >
-          <a href="#Surface-和-Rects" class="heading-link"><i class="fas fa-link"></i></a>Surface 和 Rects</h3>
+          <a href="#Surface-和-Rects" class="heading-link"><i class="undefined"></i></a>Surface 和 Rects</h3>
       <p>Surface和 Rects是 PyGame 中的基本构件。可以将 Surface 看作一张白纸，你可以在上面随意绘画。我们的屏幕对象也是一个 Surface 。它们可以包含图片。Rects 是 Surface 中矩形区域的表示。</p>
 <p>让我们创建一个 50x50 像素的 Surface，然后给它涂色。由于屏幕是黑色的，所以我们使用白色。调用 <code>get_rect() </code>在 Surface上 得到一个矩形区域和 Surface 的 x 轴 和 y 轴。</p>
 
         <h3 id="Blit-和-Flip"   >
-          <a href="#Blit-和-Flip" class="heading-link"><i class="fas fa-link"></i></a>Blit 和 Flip</h3>
+          <a href="#Blit-和-Flip" class="heading-link"><i class="undefined"></i></a>Blit 和 Flip</h3>
       <p>仅仅只是创建了 Surface 并不能在屏幕上看到它。为此我们需要将这个 Surface 绘制（Blit）到另一个 Surface 上。Blit 是一个专业术语，意思就是绘图。你仅仅只能从一个Surface Blit 到另一个Surface，我们的屏幕就是一个 Surface 对象。以下是我们如何将 surf 画到屏幕上：</p>
 <figure class="highlight python"><div class="table-container"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这一行表示：将surf画到屏幕 </span></span><br><span class="line"><span class="comment"># x：400.y:300的坐标上</span></span><br><span class="line">screen.blit(surf,(<span class="number">400</span>,<span class="number">300</span>))</span><br><span class="line">pygame.display.flip()</span><br></pre></td></tr></table></div></figure>
 <p><code>blit()</code> 有两个参数：要画的 Surface 和 在源 Surface 上的坐标。此处我们使用屏幕的中心，但是当你运行代码时，你会发现我们的 surf 并没有出现在屏幕的中心。**<strong>这是因为 blit() 是从左上角开始画 surf 。</strong></p>
 <p>注意在 blit 之后的<code>pygame.display.filp()</code>的调用。<strong>Flip将会更新自上次 flip 后的整个屏幕两次 flip 之间发生的修改都将在屏幕上显示</strong>。没有调用<code>flip()</code>那就什么也不会出现。</p>
 ]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
   </entry>
   <entry>
     <title>Python学习笔记</title>
@@ -466,37 +530,37 @@
   </entry>
   <entry>
     <title>第一次使用MSF，永恒之蓝漏洞 进入Windows 7的过程</title>
-    <url>/2021/01/18/fistUse%20MSF/</url>
+    <url>/2021/01/18/first_Use%20MSF/</url>
     <content><![CDATA[<p>还是很激动的一个过程，大佬绕过….此处记录一下一个小菜鸡第一次用MSF的过程，有些激动</p>
 <a id="more"></a> 
 
         <h3 id="前言"   >
-          <a href="#前言" class="heading-link"><i class="fas fa-link"></i></a>前言</h3>
+          <a href="#前言" class="heading-link"><i class="undefined"></i></a>前言</h3>
       <p> 本案例讲的是用利用永恒之蓝漏洞攻击Windows 7的一个过程</p>
 <ul>
 <li>永恒之蓝（Eternal Blue）<br>爆发于2017年4月14日晚，是一种利用Windows系统的<b>SMB协议</b>漏洞来获取系统的最高权限，以此来控制被入侵的计算机。甚至于2017年5月12日， 不法分子通过改造“永恒之蓝”制作了wannacry勒索病毒，使全世界大范围内遭受了该勒索病毒</li>
 <li>SMB<br>（全称是Server Message Block）是一个协议服务器信息块，它是一种客户机/服务器、请求/响应协议，通过SMB协议可以在计算机间共享文件、打印机、命名管道等资源，电脑上的网上邻居就是靠SMB实现的；SMB协议工作在应用层和会话层，可以用在TCP/IP协议之上，SMB使用TCP139端口和TCP445端口。
         <h6 id="初始化"   >
-          <a href="#初始化" class="heading-link"><i class="fas fa-link"></i></a>初始化</h6>
+          <a href="#初始化" class="heading-link"><i class="undefined"></i></a>初始化</h6>
       第一次使用msf的时候，都需要进行一个初始化的过程<div align=center><img src="https://s3.ax1x.com/2021/01/18/sylmFg.png" width="80%" height="80%"></div>
 
 </li>
 </ul>
 
         <h6 id="开启msf"   >
-          <a href="#开启msf" class="heading-link"><i class="fas fa-link"></i></a>开启msf</h6>
+          <a href="#开启msf" class="heading-link"><i class="undefined"></i></a>开启msf</h6>
       <pre><code>msfconsole</code></pre>
 <p>（开启成功界面入下）</p>
 <div align=center><img src="https://s3.ax1x.com/2021/01/18/sylMSs.png" width="80%" height="80%"></div>
 
 
         <h6 id="漏洞扫描"   >
-          <a href="#漏洞扫描" class="heading-link"><i class="fas fa-link"></i></a>漏洞扫描</h6>
+          <a href="#漏洞扫描" class="heading-link"><i class="undefined"></i></a>漏洞扫描</h6>
       <div align=center><img src="https://ftp.bmp.ovh/imgs/2021/01/939bf153a38c46f2.png" width="80%" height="80%"></div>
 
 
         <h6 id="利用漏洞"   >
-          <a href="#利用漏洞" class="heading-link"><i class="fas fa-link"></i></a>利用漏洞</h6>
+          <a href="#利用漏洞" class="heading-link"><i class="undefined"></i></a>利用漏洞</h6>
       <ul>
 <li><p>在msf搜索改漏洞ms17-010</p>
 <p>  search ms17-010</p>
@@ -521,7 +585,7 @@
 
 
         <h6 id="攻击"   >
-          <a href="#攻击" class="heading-link"><i class="fas fa-link"></i></a>攻击</h6>
+          <a href="#攻击" class="heading-link"><i class="undefined"></i></a>攻击</h6>
       <pre><code>run/exploit</code></pre>
 <p>进入成功之后就是这样的。</p>
 <div align=center><img src="https://s3.ax1x.com/2021/01/18/syl1O0.png" width="80%" height="80%"></div>
@@ -539,21 +603,21 @@
   </entry>
   <entry>
     <title>记一次kali的Nessus的安装</title>
-    <url>/2021/01/17/firstScans/</url>
+    <url>/2021/01/17/first_Scans/</url>
     <content><![CDATA[<p>由于学习中要用到Nessus，今天在安装的过程中遇到了几个问题，记录一下。</p>
 <a id="more"></a>
 
         <h4 id="安装过程"   >
-          <a href="#安装过程" class="heading-link"><i class="fas fa-link"></i></a>安装过程</h4>
+          <a href="#安装过程" class="heading-link"><i class="undefined"></i></a>安装过程</h4>
       <p>Nessus安装的教程在网上有很多。前面步骤都是一样的。在网上下载好两个压缩包，拖到kali 里面去</p>
 <div align=center><img src="https://s3.ax1x.com/2021/01/17/syKgYj.png" width="80%" height="80%"></div>
 
 
         <h4 id="问题"   >
-          <a href="#问题" class="heading-link"><i class="fas fa-link"></i></a>问题</h4>
+          <a href="#问题" class="heading-link"><i class="undefined"></i></a>问题</h4>
       
         <h5 id="1-进入Nessus之后没有Scans页面，只有Setting"   >
-          <a href="#1-进入Nessus之后没有Scans页面，只有Setting" class="heading-link"><i class="fas fa-link"></i></a>1.进入Nessus之后没有Scans页面，只有Setting</h5>
+          <a href="#1-进入Nessus之后没有Scans页面，只有Setting" class="heading-link"><i class="undefined"></i></a>1.进入Nessus之后没有Scans页面，只有Setting</h5>
       <p>这个问题是因为之前在网上找教程安装的时候，很多教程显示在初始化选择版本选的是第四个。</p>
 <div align=center><img src="https://s3.ax1x.com/2021/01/18/syMrg1.png" width="50%" height="50%"></div>
 但其实在选择第四个的时候选的是管理版本。进入界面之后就没有Scans页面。
@@ -564,7 +628,7 @@
 
 
         <h5 id="2-更新进度条回滚，无法加载出来"   >
-          <a href="#2-更新进度条回滚，无法加载出来" class="heading-link"><i class="fas fa-link"></i></a>2.更新进度条回滚，无法加载出来</h5>
+          <a href="#2-更新进度条回滚，无法加载出来" class="heading-link"><i class="undefined"></i></a>2.更新进度条回滚，无法加载出来</h5>
       <div align=center><img src="https://s3.ax1x.com/2021/01/18/syMz2n.png" width="80%" height="80%"></div>
 说真的，这个问题今天难倒了班上一半的同学，具体原因是什么不是很知道，网上说法也不一致。
 
@@ -598,7 +662,7 @@
   </entry>
   <entry>
     <title>我的第一篇博客</title>
-    <url>/2020/12/28/Fist/</url>
+    <url>/2020/12/28/first_Blog/</url>
     <content><![CDATA[<p>踩踩雷，各种报错之后，也是搭建好了这个完整的blog<br>（至少目前来看对于我来时说完整的…..以后有问题以后再说吧)</p>
 ]]></content>
       <categories>
